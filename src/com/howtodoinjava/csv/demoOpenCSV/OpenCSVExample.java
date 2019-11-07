@@ -3,7 +3,6 @@ package com.howtodoinjava.csv.demoOpenCSV;
 import java.io.FileReader;
 import java.io.IOException;
 
-import au.com.bytecode.opencsv.CSVReader;
 
 public class OpenCSVExample {
 	
