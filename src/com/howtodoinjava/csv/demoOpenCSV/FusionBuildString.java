@@ -59,7 +59,7 @@ public class FusionBuildString {
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-calendar-alt far\"]\n" +
 			"\n" +
-			"CAMPO_PERIODO_ APERTURA\n" +
+			"CAMPO_PERIODO_APERTURA\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-calendar-alt far\"]\n" +
 			"\n" +
