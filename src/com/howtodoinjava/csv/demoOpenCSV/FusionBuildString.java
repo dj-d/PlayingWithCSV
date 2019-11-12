@@ -77,15 +77,15 @@ public class FusionBuildString {
 			"<p style=\"text-align: center;\">Link utili</p>\n" +
 			"[/fusion_text][fusion_checklist icon=\"fa-hotel fas\" iconcolor=\"\" circle=\"\" circlecolor=\"#03a9f4\" size=\"\" divider=\"\" divider_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\"][fusion_li_item icon=\"fa-location-arrow fas\"]\n" +
 			"\n" +
-			"<a href=\"http://CAMPO_GOOGLE MAPS\">GOOGLE MAPS</a>\n" +
+			"<a href=\"http://CAMPO_GOOGLE_MAPS\">GOOGLE MAPS</a>\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-location-arrow fas\"]\n" +
 			"\n" +
-			"<a href=\"http://CAMPO_GOOGLE_MAPS_(VENDITA)\">GOOGLE MAPS (PUNTO VENDITA)</a>\n" +
+			"<a href=\"http://CAMPO_GOOGLE_MAPS_VENDITA\">GOOGLE MAPS (PUNTO VENDITA)</a>\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-location-arrow fas\"]\n" +
 			"\n" +
-			"<a href=\"http://CAMPO_GOOGLE_MAPS_(PRODUZIONE)\">GOOGLE MAPS (PUNTO PRODUZIONE)</a>\n" +
+			"<a href=\"http://CAMPO_GOOGLE_MAPS_PRODUZIONE\">GOOGLE MAPS (PUNTO PRODUZIONE)</a>\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-tripadvisor fab\"]\n" +
 			"\n" +
@@ -97,7 +97,7 @@ public class FusionBuildString {
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-hotel fas\"]\n" +
 			"\n" +
-			"<a href=\"http://CAMPO_HOTELS.COM\">HOTELS.COM</a>\n" +
+			"<a href=\"http://CAMPO_HOTELS_COM\">HOTELS.COM</a>\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-airbnb fab\"]\n" +
 			"\n" +
@@ -147,7 +147,7 @@ public class FusionBuildString {
 			"<p style=\"text-align: center;\">Infomobilità</p>\n" +
 			"[/fusion_text][fusion_checklist icon=\"fa-hotel fas\" iconcolor=\"\" circle=\"\" circlecolor=\"#03a9f4\" size=\"\" divider=\"\" divider_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\"][fusion_li_item icon=\"fa-shuttle-van fas\"]\n" +
 			"\n" +
-			"CAMPO_INFOMOBILITÀ\n" +
+			"CAMPO_INFOMOBILITA\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-train fas\"]<a href=\"http://www.rfi.it/rfi/LINEE-STAZIONI-TERRITORIO/Nelle-regioni/Molise\">Rete Ferroviaria Italiana</a>[/fusion_li_item][fusion_li_item icon=\"fa-tachometer-alt fas\"]<a href=\"https://www.cciss.it/web/cciss/situazione-della-viabilita\">Viabilità</a>[/fusion_li_item][/fusion_checklist][/fusion_builder_column][fusion_builder_column type=\"3_5\" layout=\"1_2\" spacing=\"\" center_content=\"no\" link=\"\" target=\"_self\" min_height=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" background_color=\"\" background_image=\"\" background_image_id=\"\" background_position=\"left top\" background_repeat=\"no-repeat\" hover_type=\"none\" border_size=\"0\" border_color=\"\" border_style=\"solid\" border_position=\"all\" border_radius=\"\" box_shadow=\"no\" dimension_box_shadow=\"\" box_shadow_blur=\"0\" box_shadow_spread=\"0\" box_shadow_color=\"\" box_shadow_style=\"\" padding_top=\"\" padding_right=\"\" padding_bottom=\"\" padding_left=\"\" margin_top=\"\" margin_bottom=\"\" animation_type=\"\" animation_direction=\"left\" animation_speed=\"0.3\" animation_offset=\"\" last=\"no\"][fusion_text columns=\"\" column_min_width=\"\" column_spacing=\"\" rule_style=\"default\" rule_size=\"\" rule_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"infotype\"]\n" +
 			"<p style=\"text-align: center;\">Descrizione</p>\n" +
@@ -159,11 +159,7 @@ public class FusionBuildString {
 			"<p style=\"text-align: left;\">CAMPO_INFO_AGGIUNTIVE</p>\n" +
 			"[/fusion_text][fusion_gallery layout=\"masonry\" picture_size=\"auto\" columns=\"2\" column_spacing=\"10\" gallery_masonry_grid_ratio=\"\" gallery_masonry_width_double=\"\" hover_type=\"liftup\" lightbox=\"yes\" lightbox_content=\"\" bordersize=\"\" bordercolor=\"\" border_radius=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\"][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/DSC_9856-300x200.jpg\" image_id=\"3330|medium\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/5.jpg\" image_id=\"3317|full\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/casettapratogentiile-300x169.jpg\" image_id=\"3316|medium\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/Verrino-300x200.png\" image_id=\"3322|medium\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/CastelDelGiudice_Borgotufi02-300x200.jpg\" image_id=\"3285|medium\" link=\"\" linktarget=\"_self\" /][/fusion_gallery][fusion_separator style_type=\"single solid\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" sep_color=\"#968caf\" top_margin=\"\" bottom_margin=\"\" border_size=\"\" icon=\"\" icon_circle=\"\" icon_circle_color=\"\" width=\"\" alignment=\"center\" /][fusion_pricing_table type=\"2\" backgroundcolor=\"\" background_color_hover=\"\" bordercolor=\"\" dividercolor=\"\" heading_color_style_1=\"\" heading_color_style_2=\"\" pricing_color=\"#03a9f4\" body_text_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" columns=\"2\"][fusion_pricing_column title=\"Ingresso singolo\" standout=\"no\"][fusion_pricing_price currency=\"$\" currency_position=\"left\" price=\"15.55\" time=\"\" ][/fusion_pricing_price][fusion_pricing_row]Feature 1[/fusion_pricing_row][/fusion_pricing_column][fusion_pricing_column title=\"Premium\" standout=\"yes\"][fusion_pricing_price currency=\"$\" currency_position=\"left\" price=\"25.55\" time=\"\" ][/fusion_pricing_price][fusion_pricing_row]Feature 1[/fusion_pricing_row][/fusion_pricing_column][/fusion_pricing_table][/fusion_builder_column][fusion_builder_column type=\"1_5\" layout=\"1_3\" spacing=\"\" center_content=\"no\" link=\"\" target=\"_self\" min_height=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" background_color=\"\" background_image=\"\" background_image_id=\"\" background_position=\"left top\" background_repeat=\"no-repeat\" hover_type=\"none\" border_size=\"0\" border_color=\"\" border_style=\"solid\" border_position=\"all\" border_radius=\"\" box_shadow=\"no\" dimension_box_shadow=\"\" box_shadow_blur=\"0\" box_shadow_spread=\"0\" box_shadow_color=\"\" box_shadow_style=\"\" padding_top=\"\" padding_right=\"\" padding_bottom=\"\" padding_left=\"\" margin_top=\"\" margin_bottom=\"\" animation_type=\"\" animation_direction=\"left\" animation_speed=\"0.3\" animation_offset=\"\" last=\"no\"][fusion_text columns=\"\" column_min_width=\"\" column_spacing=\"\" rule_style=\"default\" rule_size=\"\" rule_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"infotype\"]\n" +
 			"<p style=\"text-align: center;\">Servizi</p>\n" +
-			"[/fusion_text][fusion_checklist icon=\"fa-check fas\" iconcolor=\"\" circle=\"\" circlecolor=\"#03a9f4\" size=\"\" divider=\"yes\" divider_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\"][fusion_li_item icon=\"fa-font fas\"]\n" +
-			"\n" +
-			"Tipologia: CAMPO_TIPOLOGIA\n" +
-			"\n" +
-			"[/fusion_li_item][fusion_li_item icon=\"fa-ticket-alt fas\"]\n" +
+			"[/fusion_text][fusion_checklist icon=\"fa-check fas\" iconcolor=\"\" circle=\"\" circlecolor=\"#03a9f4\" size=\"\" divider=\"yes\" divider_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\"][fusion_li_item icon=\"fa-ticket-alt fas\"]\n" +
 			"\n" +
 			"Biglietti: CAMPO_COSTO_BIGLIETTO\n" +
 			"\n" +
@@ -173,7 +169,7 @@ public class FusionBuildString {
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-parking fas\"]\n" +
 			"\n" +
-			"Parcheggio all'aperto: CAMPO_PARCHEGGIO_ALL'APERTO\n" +
+			"Parcheggio all'aperto: CAMPO_PARCHEGGIO_ALL_APERTO\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-parking fas\"]\n" +
 			"\n" +
@@ -201,23 +197,23 @@ public class FusionBuildString {
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-fish fas\"]\n" +
 			"\n" +
-			"Menu per vegetariani: CAMPO_MENÙ_VEGETARIANI\n" +
+			"Menù per vegetariani: CAMPO_MENU_VEGETARIANI\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-fish fas\"]\n" +
 			"\n" +
-			"Menu carne: CAMPO_MENÙ_CARNE\n" +
+			"Menù carne: CAMPO_MENU_CARNE\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-fish fas\"]\n" +
 			"\n" +
-			"Menu pesce: CAMPO_MENÙ_PESCE\n" +
+			"Menù pesce: CAMPO_MENU_PESCE\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-fish fas\"]\n" +
 			"\n" +
-			"Menu per celiaci: CAMPO_MENÙ_CELIACI\n" +
+			"Menù per celiaci: CAMPO_MENU_CELIACI\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-fish fas\"]\n" +
 			"\n" +
-			"Menu per vegano: CAMPO_MENÙ_VEGANO\n" +
+			"Menù vegano: CAMPO_MENU_VEGANO\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-credit-card far\"]\n" +
 			"\n" +
@@ -289,7 +285,7 @@ public class FusionBuildString {
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-box-open fas\"]\n" +
 			"\n" +
-			"Noleggio pedalò/Attrezzature marine: CAMPO_NOLEGGIO_PEDALÒ/ATTREZZATURE_MARINE\n" +
+			"Noleggio pedalò/Attrezzature marine: CAMPO_NOLEGGIO_PEDALO_ATTREZZATURE_MARINE\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-box-open fas\"]\n" +
 			"\n" +
@@ -365,7 +361,7 @@ public class FusionBuildString {
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-calendar-alt far\"]\n" +
 			"\n" +
-			"CAMPO_PERIODO_ APERTURA\n" +
+			"CAMPO_PERIODO_APERTURA\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-calendar-alt far\"]\n" +
 			"\n" +
@@ -381,11 +377,7 @@ public class FusionBuildString {
 			"\n" +
 			"[/fusion_li_item][/fusion_checklist][fusion_separator style_type=\"single solid\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" sep_color=\"\" top_margin=\"\" bottom_margin=\"2%\" border_size=\"\" icon=\"\" icon_circle=\"\" icon_circle_color=\"\" width=\"\" alignment=\"center\" /][fusion_social_links icons_boxed=\"yes\" icons_boxed_radius=\"\" color_type=\"brand\" icon_colors=\"\" box_colors=\"\" tooltip_placement=\"\" blogger=\"CAMPO_SITO_WEB\" deviantart=\"\" digg=\"\" dribbble=\"\" dropbox=\"\" facebook=\"CAMPO_FACEBOOK\" flickr=\"CAMPO_FLICKR\" forrst=\"\" instagram=\"CAMPO_INSTAGRAM\" linkedin=\"CAMPO_LINKEDIN\" myspace=\"\" paypal=\"\" pinterest=\"CAMPO_PINTEREST\" reddit=\"\" rss=\"\" skype=\"\" soundcloud=\"\" spotify=\"\" tumblr=\"\" twitter=\"CAMPO_TWITTER\" vimeo=\"\" vk=\"\" whatsapp=\"\" xing=\"\" yahoo=\"\" yelp=\"\" youtube=\"CAMPO_YOUTUBE\" email=\"CAMPO_E-MAIL\" show_custom=\"no\" alignment=\"center\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" /][fusion_separator style_type=\"single solid\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" sep_color=\"\" top_margin=\"\" bottom_margin=\"2%\" border_size=\"\" icon=\"\" icon_circle=\"\" icon_circle_color=\"\" width=\"\" alignment=\"center\" /][fusion_text columns=\"\" column_min_width=\"\" column_spacing=\"\" rule_style=\"default\" rule_size=\"\" rule_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"infotype\"]\n" +
 			"<p style=\"text-align: center;\">Servizi</p>\n" +
-			"[/fusion_text][fusion_checklist icon=\"fa-check fas\" iconcolor=\"\" circle=\"\" circlecolor=\"#03a9f4\" size=\"\" divider=\"yes\" divider_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\"][fusion_li_item icon=\"fa-font fas\"]\n" +
-			"\n" +
-			"Tipologia: CAMPO_TIPOLOGIA\n" +
-			"\n" +
-			"[/fusion_li_item][fusion_li_item icon=\"fa-ticket-alt fas\"]\n" +
+			"[/fusion_text][fusion_checklist icon=\"fa-check fas\" iconcolor=\"\" circle=\"\" circlecolor=\"#03a9f4\" size=\"\" divider=\"yes\" divider_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\"][fusion_li_item icon=\"fa-ticket-alt fas\"]\n" +
 			"\n" +
 			"Biglietti: CAMPO_COSTO_BIGLIETTO\n" +
 			"\n" +
@@ -395,7 +387,7 @@ public class FusionBuildString {
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-parking fas\"]\n" +
 			"\n" +
-			"Parcheggio all'aperto: CAMPO_PARCHEGGIO_ALL'APERTO\n" +
+			"Parcheggio all'aperto: CAMPO_PARCHEGGIO_ALL_APERTO\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-parking fas\"]\n" +
 			"\n" +
@@ -423,23 +415,23 @@ public class FusionBuildString {
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-fish fas\"]\n" +
 			"\n" +
-			"Menu per vegetariani: CAMPO_MENÙ_VEGETARIANI\n" +
+			"Menù per vegetariani: CAMPO_MENU_VEGETARIANI\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-fish fas\"]\n" +
 			"\n" +
-			"Menu carne: CAMPO_MENÙ_CARNE\n" +
+			"Menù carne: CAMPO_MENU_CARNE\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-fish fas\"]\n" +
 			"\n" +
-			"Menu pesce: CAMPO_MENÙ_PESCE\n" +
+			"Menù pesce: CAMPO_MENU_PESCE\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-fish fas\"]\n" +
 			"\n" +
-			"Menu per celiaci: CAMPO_MENÙ_CELIACI\n" +
+			"Menù per celiaci: CAMPO_MENU_CELIACI\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-fish fas\"]\n" +
 			"\n" +
-			"Menu per vegano: CAMPO_MENÙ_VEGANO\n" +
+			"Menù vegano: CAMPO_MENU_VEGANO\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-credit-card far\"]\n" +
 			"\n" +
@@ -511,7 +503,7 @@ public class FusionBuildString {
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-box-open fas\"]\n" +
 			"\n" +
-			"Noleggio pedalò/Attrezzature marine: CAMPO_NOLEGGIO_PEDALÒ/ATTREZZATURE_MARINE\n" +
+			"Noleggio pedalò/Attrezzature marine: CAMPO_NOLEGGIO_PEDALO_ATTREZZATURE_MARINE\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-box-open fas\"]\n" +
 			"\n" +
@@ -533,15 +525,15 @@ public class FusionBuildString {
 			"<p style=\"text-align: center;\">Link utili</p>\n" +
 			"[/fusion_text][fusion_checklist icon=\"fa-hotel fas\" iconcolor=\"\" circle=\"\" circlecolor=\"#03a9f4\" size=\"\" divider=\"\" divider_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\"][fusion_li_item icon=\"fa-location-arrow fas\"]\n" +
 			"\n" +
-			"<a href=\"http://CAMPO_GOOGLE MAPS\">GOOGLE MAPS</a>\n" +
+			"<a href=\"http://CAMPO_GOOGLE_MAPS\">GOOGLE MAPS</a>\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-location-arrow fas\"]\n" +
 			"\n" +
-			"<a href=\"http://CAMPO_GOOGLE_MAPS_(VENDITA)\">GOOGLE MAPS (PUNTO VENDITA)</a>\n" +
+			"<a href=\"http://CAMPO_GOOGLE_MAPS_VENDITA\">GOOGLE MAPS (PUNTO VENDITA)</a>\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-location-arrow fas\"]\n" +
 			"\n" +
-			"<a href=\"http://CAMPO_GOOGLE_MAPS_(PRODUZIONE)\">GOOGLE MAPS (PUNTO PRODUZIONE)</a>\n" +
+			"<a href=\"http://CAMPO_GOOGLE_MAPS_PRODUZIONE\">GOOGLE MAPS (PUNTO PRODUZIONE)</a>\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-tripadvisor fab\"]\n" +
 			"\n" +
@@ -553,7 +545,7 @@ public class FusionBuildString {
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-hotel fas\"]\n" +
 			"\n" +
-			"<a href=\"http://CAMPO_HOTELS.COM\">HOTELS.COM</a>\n" +
+			"<a href=\"http://CAMPO_HOTELS_COM\">HOTELS.COM</a>\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-airbnb fab\"]\n" +
 			"\n" +
@@ -603,7 +595,7 @@ public class FusionBuildString {
 			"<p style=\"text-align: center;\">Infomobilità</p>\n" +
 			"[/fusion_text][fusion_checklist icon=\"fa-hotel fas\" iconcolor=\"\" circle=\"\" circlecolor=\"#03a9f4\" size=\"\" divider=\"\" divider_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\"][fusion_li_item icon=\"fa-shuttle-van fas\"]\n" +
 			"\n" +
-			"CAMPO_INFOMOBILITÀ\n" +
+			"CAMPO_INFOMOBILITA\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-train fas\"]<a href=\"http://www.rfi.it/rfi/LINEE-STAZIONI-TERRITORIO/Nelle-regioni/Molise\">Rete Ferroviaria Italiana</a>[/fusion_li_item][fusion_li_item icon=\"fa-tachometer-alt fas\"]<a href=\"https://www.cciss.it/web/cciss/situazione-della-viabilita\">Viabilità</a>[/fusion_li_item][/fusion_checklist][fusion_separator style_type=\"single solid\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" sep_color=\"\" top_margin=\"\" bottom_margin=\"2%\" border_size=\"\" icon=\"\" icon_circle=\"\" icon_circle_color=\"\" width=\"\" alignment=\"center\" /][fusion_gallery layout=\"masonry\" picture_size=\"auto\" columns=\"\" column_spacing=\"10\" gallery_masonry_grid_ratio=\"\" gallery_masonry_width_double=\"\" hover_type=\"liftup\" lightbox=\"yes\" lightbox_content=\"\" bordersize=\"\" bordercolor=\"\" border_radius=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\"][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/ingresso_del_giardino_della_flora_appenninica_di_capracotta-1-300x136.jpg\" image_id=\"3332|medium\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/DSC_9856-300x200.jpg\" image_id=\"3330|medium\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/5.jpg\" image_id=\"3317|full\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/casettapratogentiile-300x169.jpg\" image_id=\"3316|medium\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/slide2-300x122.jpg\" image_id=\"3323|medium\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/Verrino-300x200.png\" image_id=\"3322|medium\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/CastelDelGiudice_Borgotufi02-300x200.jpg\" image_id=\"3285|medium\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/Castel-del-Giudice-Panorama-300x200.jpg\" image_id=\"3288|medium\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/58240-300x300.jpg\" image_id=\"3302|medium\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/Caseificio-Di-Nucci_web-9-300x200.jpg\" image_id=\"3313|medium\" link=\"\" linktarget=\"_self\" /][fusion_gallery_image image=\"https://turismomolise.guerramichele.it/wp-content/uploads/2019/07/mo-6h614dwtv98yfuqo5fgncht6yq6tdp67pd51abzolnj-300x197.jpg\" image_id=\"3269|medium\" link=\"\" linktarget=\"_self\" /][/fusion_gallery][/fusion_builder_column][/fusion_builder_row][/fusion_builder_container][fusion_builder_container admin_label=\"Shop vuoto\" hundred_percent=\"yes\" hundred_percent_height=\"no\" hundred_percent_height_scroll=\"no\" hundred_percent_height_center_content=\"yes\" equal_height_columns=\"no\" menu_anchor=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" status=\"published\" publish_date=\"\" class=\"\" id=\"\" background_color=\"#3a3a3a\" background_image=\"\" background_position=\"center center\" background_repeat=\"no-repeat\" fade=\"no\" background_parallax=\"none\" enable_mobile=\"no\" parallax_speed=\"0.3\" video_mp4=\"\" video_webm=\"\" video_ogv=\"\" video_url=\"\" video_aspect_ratio=\"16:9\" video_loop=\"yes\" video_mute=\"yes\" video_preview_image=\"\" border_size=\"\" border_color=\"\" border_style=\"solid\" margin_top=\"\" margin_bottom=\"\" padding_top=\"\" padding_right=\"\" padding_bottom=\"\" padding_left=\"\" admin_toggled=\"no\"][fusion_builder_row][fusion_builder_column type=\"1_1\" layout=\"1_1\" spacing=\"\" center_content=\"no\" link=\"\" target=\"_self\" min_height=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" background_color=\"\" background_image=\"\" background_image_id=\"\" background_position=\"left top\" background_repeat=\"no-repeat\" hover_type=\"none\" border_size=\"0\" border_color=\"\" border_style=\"solid\" border_position=\"all\" border_radius=\"\" box_shadow=\"no\" dimension_box_shadow=\"\" box_shadow_blur=\"0\" box_shadow_spread=\"0\" box_shadow_color=\"\" box_shadow_style=\"\" padding_top=\"\" padding_right=\"\" padding_bottom=\"\" padding_left=\"\" margin_top=\"\" margin_bottom=\"\" animation_type=\"\" animation_direction=\"left\" animation_speed=\"0.3\" animation_offset=\"\" last=\"no\"][fusion_title hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" content_align=\"center\" size=\"2\" font_size=\"72px\" line_height=\"\" letter_spacing=\"\" margin_top=\"30px\" margin_bottom=\"\" margin_top_mobile=\"\" margin_bottom_mobile=\"\" text_color=\"\" style_type=\"none\" sep_color=\"\"]\n" +
 			"\n" +
@@ -613,11 +605,7 @@ public class FusionBuildString {
 			"\n" +
 			"In cerca di un prodotto in particolare?\n" +
 			"\n" +
-			"[/fusion_title][fusion_button link=\"https://turismomolise.guerramichele.it/index.php/contact-us/\" text_transform=\"uppercase\" title=\"\" target=\"_self\" link_attributes=\"\" alignment=\"center\" modal=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" color=\"default\" button_gradient_top_color=\"\" button_gradient_bottom_color=\"\" button_gradient_top_color_hover=\"\" button_gradient_bottom_color_hover=\"\" accent_color=\"\" accent_hover_color=\"\" type=\"\" bevel_color=\"\" border_width=\"\" size=\"xlarge\" stretch=\"default\" icon=\"\" icon_position=\"left\" icon_divider=\"no\" animation_type=\"\" animation_direction=\"left\" animation_speed=\"0.3\" animation_offset=\"\" border_radius=\"\"]Contattaci ora[/fusion_button][fusion_text columns=\"\" column_min_width=\"\" column_spacing=\"\" rule_style=\"default\" rule_size=\"\" rule_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" animation_type=\"\" animation_direction=\"left\" animation_speed=\"0.3\" animation_offset=\"\"]\n" +
-			"\n" +
-			"[wcfm_store_info id=\"7\"]\n" +
-			"\n" +
-			"[/fusion_text][/fusion_builder_column][/fusion_builder_row][/fusion_builder_container]";
+			"[/fusion_title][fusion_button link=\"https://turismomolise.guerramichele.it/index.php/contact-us/\" text_transform=\"uppercase\" title=\"\" target=\"_self\" link_attributes=\"\" alignment=\"center\" modal=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" color=\"default\" button_gradient_top_color=\"\" button_gradient_bottom_color=\"\" button_gradient_top_color_hover=\"\" button_gradient_bottom_color_hover=\"\" accent_color=\"\" accent_hover_color=\"\" type=\"\" bevel_color=\"\" border_width=\"\" size=\"xlarge\" stretch=\"default\" icon=\"\" icon_position=\"left\" icon_divider=\"no\" animation_type=\"\" animation_direction=\"left\" animation_speed=\"0.3\" animation_offset=\"\" border_radius=\"\"]Contattaci ora[/fusion_button][fusion_text columns=\"\" column_min_width=\"\" column_spacing=\"\" rule_style=\"default\" rule_size=\"\" rule_color=\"\" hide_on_mobile=\"small-visibility,medium-visibility,large-visibility\" class=\"\" id=\"\" animation_type=\"\" animation_direction=\"left\" animation_speed=\"0.3\" animation_offset=\"\"][wcfm_store_info id=\"7\"][/fusion_text][/fusion_builder_column][/fusion_builder_row][/fusion_builder_container]";
 
 	public String getContent() {
 		return content;
