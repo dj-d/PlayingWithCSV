@@ -7,7 +7,6 @@ import com.opencsv.bean.CsvToBeanBuilder;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Scanner;
 
 public class OpenCSVBindByName {
 	private static final String csvPath = "/home/djd/Documents/Turismo Molise/strutture_ricettive.csv";
@@ -36,11 +35,22 @@ public class OpenCSVBindByName {
 					str = str.replaceAll(c.name(), strRic.getField(c));
 
 					if (c.name() == strRic.getField(c)) {
-						try (BufferedReader breader = new BufferedReader(new StringReader(str))) {
+						try (BufferedReader bufferedReader = new BufferedReader(new StringReader(str))) {
 							String line;
-							while ((line = breader.readLine()) != null) {
-								if(line.contains(c.name())){
-									str = str.replace(line,"");
+							String previousLine = "";
+
+							while ((line = bufferedReader.readLine()) != null) {
+								if (line.contains(c.name())) {
+									str = str.replace(line, "");
+									str = str.replaceAll(previousLine, "");
+
+									System.out.println("previous: " + previousLine);
+									System.out.println("line: " + line);
+								} else {
+									if(line != ""){
+										previousLine = line;
+									}
+									System.out.println("else prev " + previousLine);
 								}
 							}
 						} catch (IOException exc) {
