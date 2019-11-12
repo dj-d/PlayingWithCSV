@@ -37,20 +37,17 @@ public class OpenCSVBindByName {
 					if (c.name() == strRic.getField(c)) {
 						try (BufferedReader bufferedReader = new BufferedReader(new StringReader(str))) {
 							String line;
-							String previousLine = "";
+							String previousStr = "";
 
 							while ((line = bufferedReader.readLine()) != null) {
 								if (line.contains(c.name())) {
 									str = str.replace(line, "");
-									str = str.replaceAll(previousLine, "");
+									str = str.replace(previousStr, "");
 
-									System.out.println("previous: " + previousLine);
-									System.out.println("line: " + line);
 								} else {
-									if(line != ""){
-										previousLine = line;
+									if (line.contains("[/fusion_li_item][fusion_li_item icon=")) {
+										previousStr = line;
 									}
-									System.out.println("else prev " + previousLine);
 								}
 							}
 						} catch (IOException exc) {
@@ -58,7 +55,6 @@ public class OpenCSVBindByName {
 						}
 					}
 				}
-
 				csvWriter.writeNext(new String[]{str});
 			}
 		}
