@@ -45,7 +45,7 @@ public class OpenCSVBindByName {
 									str = str.replace(previousStr, "");
 
 								} else {
-									if (line.contains("[/fusion_li_item][fusion_li_item icon=")) {
+									if ((line.contains("[/fusion_li_item][fusion_li_item icon=")) && !(line.contains("[/fusion_checklist][/fusion_builder_column][fusion_builder_column type="))) {
 										previousStr = line;
 									}
 								}
