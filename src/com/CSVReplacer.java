@@ -1,15 +1,15 @@
-package com.howtodoinjava.csv.demoOpenCSV;
+package com;
 
+import com.attractors.StruttureRicettive;
 import com.opencsv.CSVWriter;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 
 import java.io.*;
-import java.nio.Buffer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class Main {
+public class CSVReplacer {
 	private static final String csvPath = "/home/djd/Documents/Turismo Molise/strutture_ricettive.csv";
 	private static final String newCsvPath = "/home/djd/Documents/Turismo Molise/strutture_ricettive_nuovo.csv";
 
@@ -34,7 +34,9 @@ public class Main {
 
 			for (StruttureRicettive struttureRicettive : csvToBean) {
 				String stringToReplace = fusionBuildString.getContent();
+
 				stringToReplace = stringToReplace.replaceAll("\n", "");
+
 				String regex = "]\\[";
 				stringToReplace = stringToReplace.replaceAll(regex, "]\n\n[");
 

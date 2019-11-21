@@ -1,4 +1,4 @@
-package com.howtodoinjava.csv.demoOpenCSV;
+package com;
 
 public enum Fields {
 	CAMPO_NOME_COMMERCIALE,
