@@ -28,13 +28,16 @@ public class OpenCSVBindByName {
 					.withType(StruttureRicettive.class)
 					.withIgnoreLeadingWhiteSpace(true)
 					.build();
+
 			for (StruttureRicettive strRic : csvToBean) {
 				String str = fusionBuildString.getContent();
 
 				for (Fields c : Fields.values()) {
-					str = str.replaceAll(c.name(), strRic.getField(c));
+					if (!strRic.getField(c).equals("-")) {
+						str = str.replaceAll(c.name(), strRic.getField(c));
+					}
 
-					if (c.name() == strRic.getField(c)) {
+					if ((c.name().equals(strRic.getField(c))) || strRic.getField(c).equals("-")) { // così mette due colonne a capo
 						try (BufferedReader bufferedReader = new BufferedReader(new StringReader(str))) {
 							String line;
 							String previousStr = "";
@@ -45,7 +48,7 @@ public class OpenCSVBindByName {
 									str = str.replace(previousStr, "");
 
 								} else {
-									if ((line.contains("[/fusion_li_item][fusion_li_item icon=")) && !(line.contains("[/fusion_checklist][/fusion_builder_column][fusion_builder_column type="))) {
+									if (line.contains("[/fusion_li_item][fusion_li_item icon=") && !(line.contains("[/fusion_checklist][/fusion_builder_column][fusion_builder_column type="))) {
 										previousStr = line;
 									}
 								}
