@@ -5,6 +5,7 @@ import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 
 import java.io.*;
+import java.nio.Buffer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -33,17 +34,28 @@ public class Main {
 
 			for (StruttureRicettive struttureRicettive : csvToBean) {
 				String stringToReplace = fusionBuildString.getContent();
+				stringToReplace = stringToReplace.replaceAll("\n", "");
+				String regex = "]\\[";
+				stringToReplace = stringToReplace.replaceAll(regex, "]\n\n[");
 
 				for (Fields fields : Fields.values()) {
-					if(!struttureRicettive.getField(fields).equals("-")) {
+					if (!struttureRicettive.getField(fields).equals("-")) {
 						stringToReplace = stringToReplace.replaceAll(fields.name(), struttureRicettive.getField(fields));
 					}
 
-					if(struttureRicettive.getField(fields).equals(fields.name()) || struttureRicettive.getField(fields).equals("-")) {
-						stringToReplace = stringToReplace.replaceAll(fields.name(), "");
+					if (struttureRicettive.getField(fields).equals(fields.name()) || struttureRicettive.getField(fields).equals("-")) {
+						BufferedReader bufferedReader = new BufferedReader(new StringReader(stringToReplace));
+						String line;
+
+						while ((line = bufferedReader.readLine()) != null) {
+							if (line.contains(fields.name())) {
+								System.out.println(line);
+								stringToReplace = stringToReplace.replace(line, "");
+							}
+						}
 					}
 				}
-				csvWriter.writeNext(new String[] {stringToReplace});
+				csvWriter.writeNext(new String[]{stringToReplace});
 			}
 		}
 	}
