@@ -1,5 +1,6 @@
-package com.howtodoinjava.csv.demoOpenCSV;
+package com.attractors;
 
+import com.Fields;
 import com.opencsv.bean.CsvBindByName;
 
 public class StruttureRicettive {
