@@ -42,7 +42,11 @@ public class CSVReplacer {
 
 				for (Fields fields : Fields.values()) {
 					if (!struttureRicettive.getField(fields).equals("-")) {
-						stringToReplace = stringToReplace.replaceAll(fields.name(), struttureRicettive.getField(fields));
+						if(fields.name().contains("CAMPO_TELEFONO") || fields.name().contains("CAMPO_INDIRIZZO")) {
+							stringToReplace = stringToReplace.replaceAll(fields.name(), struttureRicettive.getField(fields) + "\n");
+						} else {
+							stringToReplace = stringToReplace.replaceAll(fields.name(), struttureRicettive.getField(fields));
+						}
 					}
 
 					if (struttureRicettive.getField(fields).equals(fields.name()) || struttureRicettive.getField(fields).equals("-")) {
@@ -51,7 +55,6 @@ public class CSVReplacer {
 
 						while ((line = bufferedReader.readLine()) != null) {
 							if (line.contains(fields.name())) {
-								System.out.println(line);
 								stringToReplace = stringToReplace.replace(line, "");
 							}
 						}
