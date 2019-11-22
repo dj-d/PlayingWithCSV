@@ -27,9 +27,8 @@ public class Food {
 	private static final String TRIPADVISOR = "Tripadvisor";
 	private static final String INFO_AGGIUNTIVE = "INFO AGGIUNTIVE";
 	private static final String TIPOLOGIA = "Tipologia";
-	private static final String PARCHEGGIO_APERTO = "Parcheggio all'aperto";
-	private static final String PARCHEGGIO_COPERTO = "Parcheggio coperto";
 	private static final String PARCHEGGIO_GRATUITO = "Parcheggio gratuito";
+	private static final String PARCHEGGIO_IN_STRADA = "Parcheggio in strada";
 	private static final String ACCESSIBILE_AI_DISABILI = "Accessibile ai disabili";
 	private static final String PAGAMENTO_CON_CARTA = "Pagamento con carta";
 	private static final String ANIMALI_AMMESSI = "Animali ammessi";
@@ -44,7 +43,6 @@ public class Food {
 	private static final String PER_FAMIGLIE_CON_BAMBINI = "Per famiglie con bambini";
 	private static final String CUCINA_INTERNAZIONE = "Cucina internazionale";
 	private static final String ALTRO = "Altro";
-	private static final String SPECIFICARE_ALTRO = "Specificare altro";
 	private static final String LATITUDINE = "Latitudine";
 	private static final String LONGITUDINE = "Longitudine";
 	private static final String LINK_IMG_LOGO = "Link immagine logo";
@@ -58,6 +56,7 @@ public class Food {
 	private static final String FONTE = "FONTE";
 	private static final String PROVINCIA = "PROVINCIA";
 	private static final String GIORNO_DI_CHIUSURA = "GIORNO DI CHIUSURA";
+	private static final String ALTRA_TIPOLOGIA = "ALTRA TIPOLOGIA";
 
 	@CsvBindByName(column = NOME_COMMERCIALE, required = true)
 	private String nomeCommerciale;
@@ -128,14 +127,11 @@ public class Food {
 	@CsvBindByName(column = TIPOLOGIA, required = true)
 	private String tipologia;
 
-	@CsvBindByName(column = PARCHEGGIO_APERTO, required = true)
-	private String parcheggioAperto;
-
-	@CsvBindByName(column = PARCHEGGIO_COPERTO, required = true)
-	private String parcheggioCoperto;
-
 	@CsvBindByName(column = PARCHEGGIO_GRATUITO, required = true)
 	private String parcheggioGratuito;
+
+	@CsvBindByName(column = PARCHEGGIO_IN_STRADA, required = true)
+	private String parcheggioInStrada;
 
 	@CsvBindByName(column = ACCESSIBILE_AI_DISABILI, required = true)
 	private String AccessibileAiDisabili;
@@ -179,9 +175,6 @@ public class Food {
 	@CsvBindByName(column = ALTRO, required = true)
 	private String altro;
 
-	@CsvBindByName(column = SPECIFICARE_ALTRO, required = true)
-	private String specificareAltro;
-
 	@CsvBindByName(column = LATITUDINE, required = true)
 	private String latitudine;
 
@@ -220,6 +213,9 @@ public class Food {
 
 	@CsvBindByName(column = GIORNO_DI_CHIUSURA, required = true)
 	private String giornoDiChiusura;
+
+	@CsvBindByName(column = ALTRA_TIPOLOGIA, required = true)
+	private String altraTipologia;
 
 	public String getField(Fields str) {
 		switch (str) {
@@ -295,11 +291,8 @@ public class Food {
 			case CAMPO_INFO_AGGIUNTIVE:
 				return infoAggiuntive;
 
-			case CAMPO_PARCHEGGIO_ALL_APERTO:
-				return parcheggioAperto;
-
-			case CAMPO_PARCHEGGIO_COPERTO:
-				return parcheggioCoperto;
+			case CAMPO_PARCHEGGIO_IN_STRADA:
+				return parcheggioInStrada;
 
 			case CAMPO_PARCHEGGIO_GRATUITO:
 				return parcheggioGratuito;
@@ -340,9 +333,6 @@ public class Food {
 			case CAMPO_ALTRO:
 				return altro;
 
-			case CAMPO_SPECIFICARE_ALTRO:
-				return specificareAltro;
-
 			case CAMPO_LATITUDINE:
 				return latitudine;
 
@@ -360,6 +350,9 @@ public class Food {
 
 			case CAMPO_GIORNO_DI_CHIUSURA:
 				return giornoDiChiusura;
+
+			case CAMPO_ALTRA_TIPOLOGIA:
+				return altraTipologia;
 
 			default:
 				return str.name();
