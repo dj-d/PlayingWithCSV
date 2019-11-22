@@ -32,9 +32,8 @@ public class StruttureRicettive {
 	private static final String INFO_AGGIUNTIVE = "INFO AGGIUNTIVE";
 	private static final String TIPOLOGIA = "Tipologia";
 	private static final String STELLE = "Stelle";
-	private static final String PARCHEGGIO_APERTO = "Parcheggio all'aperto";
-	private static final String PARCHEGGIO_COPERTO = "Parcheggio coperto";
-	private static final String PARCHEGGIO_GRATUITO = "Parcheggio gratuito";
+	private static final String PARCHEGGIO_IN_STRADA = "Parcheggio in strada";
+	private static final String PARCHEGGIO_CUSTODITO = "Parcheggio custodito";
 	private static final String PAGAMENTO_CON_CARTA = "Pagamento con carta";
 	private static final String POSTO_BICI = "Posto bici";
 	private static final String SERVIZI_SPIAGGIA = "Servizi spiaggia";
@@ -48,7 +47,6 @@ public class StruttureRicettive {
 	private static final String SERVIZIO_IN_CAMERA = "Servizio in camera";
 	private static final String ACCESSIBILE_AI_DISABILI = "Accessibile ai disabili";
 	private static final String ALTRO = "Altro";
-	private static final String SPECIFICARE_ALTRO = "Specificare altro";
 	private static final String PACCHETTI_OFFERTI = "Pacchetti offerti";
 	private static final String LATITUDINE = "Latitudine";
 	private static final String LONGITUDINE = "Longitudine";
@@ -62,6 +60,7 @@ public class StruttureRicettive {
 	private static final String INFORMAZIONI_CRONOLOGICHE = "Informazioni cronologiche";
 	private static final String FONTE = "FONTE";
 	private static final String PROVINCIA = "PROVINCIA";
+	private static final String ALTRA_TIPOLOGIA = "ALTRA TIPOLOGIA";
 
 	@CsvBindByName(column = NOME_COMMERCIALE, required = true)
 	private String nomeCommerciale;
@@ -147,14 +146,11 @@ public class StruttureRicettive {
 	@CsvBindByName(column = STELLE, required = true)
 	private String stelle;
 
-	@CsvBindByName(column = PARCHEGGIO_APERTO, required = true)
-	private String parcheggioAperto;
+	@CsvBindByName(column = PARCHEGGIO_IN_STRADA, required = true)
+	private String parcheggioInStrada;
 
-	@CsvBindByName(column = PARCHEGGIO_COPERTO, required = true)
-	private String parcheggioCoperto;
-
-	@CsvBindByName(column = PARCHEGGIO_GRATUITO, required = true)
-	private String parcheggioGratuito;
+	@CsvBindByName(column = PARCHEGGIO_CUSTODITO, required = true)
+	private String parcheggioCustodito;
 
 	@CsvBindByName(column = PAGAMENTO_CON_CARTA, required = true)
 	private String pagamentoConCarta;
@@ -195,9 +191,6 @@ public class StruttureRicettive {
 	@CsvBindByName(column = ALTRO, required = true)
 	private String altro;
 
-	@CsvBindByName(column = SPECIFICARE_ALTRO, required = true)
-	private String specificareAltro;
-
 	@CsvBindByName(column = PACCHETTI_OFFERTI, required = true)
 	private String pacchettiOfferti;
 
@@ -237,6 +230,8 @@ public class StruttureRicettive {
 	@CsvBindByName(column = PROVINCIA, required = true)
 	private String provincia;
 
+	@CsvBindByName(column = ALTRA_TIPOLOGIA, required = true)
+	private String altraTipologia;
 
 	public String getField(Fields str) {
 		switch (str) {
@@ -327,14 +322,11 @@ public class StruttureRicettive {
 			case CAMPO_STELLE:
 				return stelle;
 
-			case CAMPO_PARCHEGGIO_ALL_APERTO:
-				return parcheggioAperto;
+			case CAMPO_PARCHEGGIO_IN_STRADA:
+				return parcheggioInStrada;
 
-			case CAMPO_PARCHEGGIO_COPERTO:
-				return parcheggioCoperto;
-
-			case CAMPO_PARCHEGGIO_GRATUITO:
-				return parcheggioGratuito;
+			case CAMPO_PARCHEGGIO_CUSTODITO:
+				return parcheggioCustodito;
 
 			case CAMPO_PAGAMENTO_CON_CARTA:
 				return pagamentoConCarta;
@@ -375,9 +367,6 @@ public class StruttureRicettive {
 			case CAMPO_ALTRO:
 				return altro;
 
-			case CAMPO_SPECIFICARE_ALTRO:
-				return specificareAltro;
-
 			case CAMPO_PACCHETTI_OFFERTI:
 				return pacchettiOfferti;
 
@@ -395,6 +384,9 @@ public class StruttureRicettive {
 
 			case CAMPO_FONTE:
 				return fonte;
+
+			case CAMPO_ALTRA_TIPOLOGIA:
+				return altraTipologia;
 
 			default:
 				return str.name();
