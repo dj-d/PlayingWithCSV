@@ -3,6 +3,8 @@ package com.attractors;
 import com.Fields;
 import com.opencsv.bean.CsvBindByName;
 
+import java.rmi.AlreadyBoundException;
+
 public class Agroalimentare {
 	private static final String NOME_COMMERCIALE = "NOME COMMERCIALE";
 	private static final String DESCRIZIONE = "DESCRIZIONE";
@@ -33,11 +35,10 @@ public class Agroalimentare {
 	private static final String DEGUSTAZIONI_IN_LOCO = "Degustazioni in loco";
 	private static final String VISITE_GUIDATE = "Visite guidate";
 	private static final String ALTRO = "Altro";
-	private static final String SPECIFICARE_ALTRO = "Specificare altro";
 	private static final String LATITUDINE_PRODUZIONE = "Latitudine PRODUZIONE";
 	private static final String LONGITUDINE_PRODUZIONE = "Longitudine PRODUZIONE";
 	private static final String LATITUDINE_VENDITA = "Latitudine VENDITA";
-	private static final String LONGITUDINE_VENDITA = "Longitudine VENDITE";
+	private static final String LONGITUDINE_VENDITA = "Longitudine VENDITA";
 	private static final String LINK_IMG_LOGO = "Link immagine logo";
 	private static final String LINK_IMG_COPERTINA = "Link immagine copertina";
 	private static final String LINK_IMG_GALLERIA_1 = "Immagine galleria 1";
@@ -50,6 +51,7 @@ public class Agroalimentare {
 	private static final String PROVINCIA = "PROVINCIA";
 	private static final String GIORNO_DI_CHIUSURA_PRODUZIONE = "GIORNO DI CHIUSURA PRODUZIONE";
 	private static final String GIORNO_DI_CHIUSURA_VENDITA = "GIORNO DI CHIUSURA VENDITA";
+	private static final String ALTRA_TIPOLOGIA = "ALTRA TIPOLOGIA";
 
 	@CsvBindByName(column = NOME_COMMERCIALE, required = true)
 	private String nomeCommerciale;
@@ -129,11 +131,14 @@ public class Agroalimentare {
 	@CsvBindByName(column = TIPOLOGIA, required = true)
 	private String tipologia;
 
+	@CsvBindByName(column = DEGUSTAZIONI_IN_LOCO, required = true)
+	private String degustazioniInLoco;
+
+	@CsvBindByName(column = VISITE_GUIDATE, required = true)
+	private String visiteGuidate;
+
 	@CsvBindByName(column = ALTRO, required = true)
 	private String altro;
-
-	@CsvBindByName(column = SPECIFICARE_ALTRO, required = true)
-	private String specificareAltro;
 
 	@CsvBindByName(column = LATITUDINE_PRODUZIONE, required = true)
 	private String latitudineProduzione;
@@ -182,6 +187,9 @@ public class Agroalimentare {
 
 	@CsvBindByName(column = GIORNO_DI_CHIUSURA_VENDITA, required = true)
 	private String giornoDiChiusuraVendita;
+
+	@CsvBindByName(column = ALTRA_TIPOLOGIA, required = true)
+	private String altraTipologia;
 
 	public String getField(Fields str) {
 		switch (str) {
@@ -266,11 +274,14 @@ public class Agroalimentare {
 			case CAMPO_INFO_AGGIUNTIVE:
 				return infoAggiuntive;
 
+			case CAMPO_DEGUSTAZIONI_IN_LOCO:
+				return degustazioniInLoco;
+
+			case CAMPO_VISITE_GUIDATE:
+				return visiteGuidate;
+
 			case CAMPO_ALTRO:
 				return altro;
-
-			case CAMPO_SPECIFICARE_ALTRO:
-				return specificareAltro;
 
 			case CAMPO_CATEGORIA:
 				return categoria;
@@ -286,6 +297,9 @@ public class Agroalimentare {
 
 			case CAMPO_GIORNO_DI_CHIUSURA_PUNTO_VENDITA:
 				return giornoDiChiusuraVendita;
+
+			case CAMPO_ALTRA_TIPOLOGIA:
+				return altraTipologia;
 
 			default:
 				return str.name();
