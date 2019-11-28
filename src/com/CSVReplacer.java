@@ -1,6 +1,6 @@
 package com;
 
-import com.attractors.StruttureRicettive;
+import com.attractors.AgenzieViaggiETurismo;
 import com.opencsv.CSVWriter;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
@@ -10,8 +10,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class CSVReplacer {
-	private static final String csvPath = "/home/djd/Documents/Turismo Molise/strutture_ricettive.csv";
-	private static final String newCsvPath = "/home/djd/Documents/Turismo Molise/strutture_ricettive_nuovo.csv";
+	private static String nameOfCsv = "agenzieViaggiETurismo";
+
+	private static final String csvPath = "/home/djd/Documents/Turismo Molise/" + nameOfCsv + ".csv";
+	private static final String newCsvPath = "/home/djd/Documents/Turismo Molise/" + nameOfCsv + "_nuovo.csv";
 
 	public static void main(String[] args) throws IOException {
 		FusionBuildString fusionBuildString = new FusionBuildString();
@@ -27,12 +29,12 @@ public class CSVReplacer {
 						CSVWriter.DEFAULT_LINE_END
 				)) {
 
-			CsvToBean<StruttureRicettive> csvToBean = new CsvToBeanBuilder(reader)
-					.withType(StruttureRicettive.class)
+			CsvToBean<AgenzieViaggiETurismo> csvToBean = new CsvToBeanBuilder(reader)
+					.withType(AgenzieViaggiETurismo.class)
 					.withIgnoreLeadingWhiteSpace(true)
 					.build();
 
-			for (StruttureRicettive struttureRicettive : csvToBean) {
+			for (AgenzieViaggiETurismo agenzieViaggiETurismo : csvToBean) {
 				String stringToReplace = fusionBuildString.getContent();
 
 				stringToReplace = stringToReplace.replaceAll("\n", "");
@@ -41,15 +43,15 @@ public class CSVReplacer {
 				stringToReplace = stringToReplace.replaceAll(regex, "]\n\n[");
 
 				for (Fields fields : Fields.values()) {
-					if (!struttureRicettive.getField(fields).equals("-")) {
+					if (!agenzieViaggiETurismo.getField(fields).equals("-")) {
 						if(fields.name().contains("CAMPO_TELEFONO") || fields.name().contains("CAMPO_INDIRIZZO")) {
-							stringToReplace = stringToReplace.replaceAll(fields.name(), struttureRicettive.getField(fields) + "\n");
+							stringToReplace = stringToReplace.replaceAll(fields.name(), agenzieViaggiETurismo.getField(fields) + "\n");
 						} else {
-							stringToReplace = stringToReplace.replaceAll(fields.name(), struttureRicettive.getField(fields));
+							stringToReplace = stringToReplace.replaceAll(fields.name(), agenzieViaggiETurismo.getField(fields));
 						}
 					}
 
-					if (struttureRicettive.getField(fields).equals(fields.name()) || struttureRicettive.getField(fields).equals("-")) {
+					if (agenzieViaggiETurismo.getField(fields).equals(fields.name()) || agenzieViaggiETurismo.getField(fields).equals("-")) {
 						BufferedReader bufferedReader = new BufferedReader(new StringReader(stringToReplace));
 						String line;
 
