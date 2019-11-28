@@ -14,7 +14,7 @@ public class AgenzieViaggiETurismo {
 	private static final String INDIRIZZO = "INDIRIZZO";
 	private static final String COMUNE = "COMUNE";
 	private static final String ORARI_APERTURA = "ORARI APERTURA";
-	private static final String PERIODO_APERTURA = "PERIODO DI APERTURA";
+	private static final String PERIODO_APERTURA = "PERIODO APERTURA";
 	private static final String FACEBOOK = "Facebook";
 	private static final String FLICKR = "Flickr";
 	private static final String GOOGLE = "Google";
@@ -40,7 +40,6 @@ public class AgenzieViaggiETurismo {
 	private static final String LINK_IMG_GALLERIA_4 = "Immagine galleria 4";
 	private static final String CATEGORIA = "Categoria";
 	private static final String INFORMAZIONI_CRONOLOGICHE = "Informazioni cronologiche";
-	private static final String FONTE = "FONTE";
 	private static final String PROVINCIA = "PROVINCIA";
 	private static final String GIORNO_DI_CHIUSURA = "GIORNO DI CHIUSURA";
 
@@ -152,9 +151,6 @@ public class AgenzieViaggiETurismo {
 	@CsvBindByName(column = INFORMAZIONI_CRONOLOGICHE, required = true)
 	private String informazioniCronologiche;
 
-	@CsvBindByName(column = FONTE, required = true)
-	private String fonte;
-
 	@CsvBindByName(column = PROVINCIA, required = true)
 	private String provincia;
 
@@ -241,9 +237,6 @@ public class AgenzieViaggiETurismo {
 			case CAMPO_INFORMAZIONI_CRONOLOGICHE:
 				return informazioniCronologiche;
 
-			case CAMPO_FONTE:
-				return fonte;
-
 			case CAMPO_INFO_AGGIUNTIVE:
 				return infoAggiuntive;
 
@@ -261,6 +254,24 @@ public class AgenzieViaggiETurismo {
 
 			case CAMPO_GIORNO_DI_CHIUSURA:
 				return giornoDiChiusura;
+
+			case CAMPO_IMAGE_GALLERIA_1:
+				return lingImgGalleriaUno;
+
+			case CAMPO_IMAGE_GALLERIA_2:
+				return lingImgGalleriaDue;
+
+			case CAMPO_IMAGE_GALLERIA_3:
+				return lingImgGalleriaTre;
+
+			case CAMPO_IMAGE_GALLERIA_4:
+				return lingImgGalleriaQuattro;
+
+			case CAMPO_IMAGE_LOGO:
+				return linkImgLogo;
+
+			case CAMPO_IMAGE_COPERTINA:
+				return linkImgCopertina;
 
 			default:
 				return str.name();
