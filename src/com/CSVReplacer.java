@@ -51,7 +51,7 @@ public class CSVReplacer {
 						}
 					}
 
-					if (all.getField(fields).equals(fields.name()) || all.getField(fields).equals("-")) {
+					if (all.getField(fields).equals(fields.name()) || all.getField(fields).equals("-") || all.getField(fields).equals("")) {
 						BufferedReader bufferedReader = new BufferedReader(new StringReader(stringToReplace));
 						String line;
 
