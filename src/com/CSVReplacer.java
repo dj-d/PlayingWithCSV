@@ -1,6 +1,6 @@
 package com;
 
-import com.attractors.AgenzieViaggiETurismo;
+import com.attractors.All;
 import com.opencsv.CSVWriter;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
@@ -29,12 +29,12 @@ public class CSVReplacer {
 						CSVWriter.DEFAULT_LINE_END
 				)) {
 
-			CsvToBean<AgenzieViaggiETurismo> csvToBean = new CsvToBeanBuilder(reader)
-					.withType(AgenzieViaggiETurismo.class)
+			CsvToBean<All> csvToBean = new CsvToBeanBuilder(reader)
+					.withType(All.class)
 					.withIgnoreLeadingWhiteSpace(true)
 					.build();
 
-			for (AgenzieViaggiETurismo agenzieViaggiETurismo : csvToBean) {
+			for (All all : csvToBean) {
 				String stringToReplace = fusionBuildString.getContent();
 
 				stringToReplace = stringToReplace.replaceAll("\n", "");
@@ -43,15 +43,15 @@ public class CSVReplacer {
 				stringToReplace = stringToReplace.replaceAll(regex, "]\n\n[");
 
 				for (Fields fields : Fields.values()) {
-					if (!agenzieViaggiETurismo.getField(fields).equals("-")) {
+					if (!all.getField(fields).equals("-")) {
 						if(fields.name().contains("CAMPO_TELEFONO") || fields.name().contains("CAMPO_INDIRIZZO")) {
-							stringToReplace = stringToReplace.replaceAll(fields.name(), agenzieViaggiETurismo.getField(fields) + "\n");
+							stringToReplace = stringToReplace.replaceAll(fields.name(), all.getField(fields) + "\n");
 						} else {
-							stringToReplace = stringToReplace.replaceAll(fields.name(), agenzieViaggiETurismo.getField(fields));
+							stringToReplace = stringToReplace.replaceAll(fields.name(), all.getField(fields));
 						}
 					}
 
-					if (agenzieViaggiETurismo.getField(fields).equals(fields.name()) || agenzieViaggiETurismo.getField(fields).equals("-")) {
+					if (all.getField(fields).equals(fields.name()) || all.getField(fields).equals("-")) {
 						BufferedReader bufferedReader = new BufferedReader(new StringReader(stringToReplace));
 						String line;
 
