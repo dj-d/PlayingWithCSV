@@ -1,5 +1,6 @@
 package com;
 
+import com.attractors.All;
 import com.attractors.StruttureRicettive;
 import com.opencsv.CSVWriter;
 import com.opencsv.bean.CsvToBean;
@@ -10,7 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class CSVReplacer {
-	private static String nameOfCsv = "struttureRicettive";
+	private static String nameOfCsv = "joined";
 
 	private static final String csvPath = "/home/djd/Documents/Turismo Molise/" + nameOfCsv + ".csv";
 	private static final String newCsvPath = "/home/djd/Documents/Turismo Molise/" + nameOfCsv + "_nuovo.csv";
@@ -29,12 +30,12 @@ public class CSVReplacer {
 						CSVWriter.DEFAULT_LINE_END
 				)) {
 
-			CsvToBean<StruttureRicettive> csvToBean = new CsvToBeanBuilder(reader)
-					.withType(StruttureRicettive.class)
+			CsvToBean<All> csvToBean = new CsvToBeanBuilder(reader)
+					.withType(All.class)
 					.withIgnoreLeadingWhiteSpace(true)
 					.build();
 
-			for (StruttureRicettive atr : csvToBean) {
+			for (All atr : csvToBean) {
 				String stringToReplace = fusionBuildString.getContent();
 
 				stringToReplace = stringToReplace.replaceAll("\n", "");
