@@ -13,10 +13,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class CSVReplacer {
-	private static String nameOfCsv = "eventi";
+	private static String nameOfCsv = "joined";
 
 	private static final String csvPath = "/home/djd/Documents/Turismo Molise/" + nameOfCsv + ".csv";
 	private static final String newCsvPath = "/home/djd/Documents/Turismo Molise/" + nameOfCsv + "_nuovo.csv";
+
+	private static final String placeholderLogo = "https://www.molise-italia.it/wp-content/uploads/2019/10/logo-placeholder.png";
+	private static final String placeholderGallery = "https://www.molise-italia.it/wp-content/uploads/2019/10/imagePlaceholderImage.jpg";
 
 	public static void main(String[] args) throws IOException {
 		FusionBuildString fusionBuildString = new FusionBuildString();
@@ -32,12 +35,12 @@ public class CSVReplacer {
 						CSVWriter.DEFAULT_LINE_END
 				)) {
 
-			CsvToBean<Eventi> csvToBean = new CsvToBeanBuilder(reader)
-					.withType(Eventi.class)
+			CsvToBean<All> csvToBean = new CsvToBeanBuilder(reader)
+					.withType(All.class)
 					.withIgnoreLeadingWhiteSpace(true)
 					.build();
 
-			for (Eventi atr : csvToBean) {
+			for (All atr : csvToBean) {
 				String stringToReplace = fusionBuildString.getContent();
 
 				stringToReplace = stringToReplace.replaceAll("\n", "");
@@ -60,6 +63,22 @@ public class CSVReplacer {
 							}
 						} else {
 							stringToReplace = stringToReplace.replaceAll(fields.name(), atr.getField(fields));
+						}
+					} else {
+						if (fields.name().contains(Fields.CAMPO_IMAGE_LOGO.name())) {
+							stringToReplace = stringToReplace.replace(Fields.CAMPO_IMAGE_LOGO.name(), placeholderLogo);
+						} else if (fields.name().contains(Fields.CAMPO_IMAGE_COPERTINA.name())) {
+							stringToReplace = stringToReplace.replace(Fields.CAMPO_IMAGE_COPERTINA.name(), placeholderGallery);
+						} else if (fields.name().contains(Fields.CAMPO_IMAGE_GALLERIA_1.name())) {
+							stringToReplace = stringToReplace.replace(Fields.CAMPO_IMAGE_GALLERIA_1.name(), placeholderGallery);
+						} else if (fields.name().contains(Fields.CAMPO_IMAGE_GALLERIA_2.name())) {
+							stringToReplace = stringToReplace.replace(Fields.CAMPO_IMAGE_GALLERIA_2.name(), placeholderGallery);
+						} else if (fields.name().contains(Fields.CAMPO_IMAGE_GALLERIA_3.name())) {
+							stringToReplace = stringToReplace.replace(Fields.CAMPO_IMAGE_GALLERIA_3.name(), placeholderGallery);
+						} else if (fields.name().contains(Fields.CAMPO_IMAGE_GALLERIA_4.name())) {
+							stringToReplace = stringToReplace.replace(Fields.CAMPO_IMAGE_GALLERIA_4.name(), placeholderGallery);
+						} else if (fields.name().contains(Fields.CAMPO_IMAGE_GALLERIA_5.name())) {
+							stringToReplace = stringToReplace.replace(Fields.CAMPO_IMAGE_GALLERIA_5.name(), placeholderGallery);
 						}
 					}
 
