@@ -13,7 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class CSVReplacer {
-	private static String nameOfCsv = "joined";
+	private static String nameOfCsv = "eventi";
 
 	private static final String csvPath = "/home/djd/Documents/Turismo Molise/" + nameOfCsv + ".csv";
 	private static final String newCsvPath = "/home/djd/Documents/Turismo Molise/" + nameOfCsv + "_nuovo.csv";
@@ -35,12 +35,12 @@ public class CSVReplacer {
 						CSVWriter.DEFAULT_LINE_END
 				)) {
 
-			CsvToBean<All> csvToBean = new CsvToBeanBuilder(reader)
-					.withType(All.class)
+			CsvToBean<Eventi> csvToBean = new CsvToBeanBuilder(reader)
+					.withType(Eventi.class)
 					.withIgnoreLeadingWhiteSpace(true)
 					.build();
 
-			for (All atr : csvToBean) {
+			for (Eventi atr : csvToBean) {
 				String stringToReplace = fusionBuildString.getContent();
 
 				stringToReplace = stringToReplace.replaceAll("\n", "");
