@@ -13,7 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class CSVReplacer {
-	private static String nameOfCsv = "eventi";
+	private static String nameOfCsv = "joined";
 
 	private static final String csvPath = "/home/djd/Documents/Turismo Molise/" + nameOfCsv + ".csv";
 	private static final String newCsvPath = "/home/djd/Documents/Turismo Molise/" + nameOfCsv + "_nuovo.csv";
@@ -35,12 +35,12 @@ public class CSVReplacer {
 						CSVWriter.DEFAULT_LINE_END
 				)) {
 
-			CsvToBean<Eventi> csvToBean = new CsvToBeanBuilder(reader)
-					.withType(Eventi.class)
+			CsvToBean<All> csvToBean = new CsvToBeanBuilder(reader)
+					.withType(All.class)
 					.withIgnoreLeadingWhiteSpace(true)
 					.build();
 
-			for (Eventi atr : csvToBean) {
+			for (All atr : csvToBean) {
 				String stringToReplace = fusionBuildString.getContent();
 
 				stringToReplace = stringToReplace.replaceAll("\n", "");
@@ -55,12 +55,12 @@ public class CSVReplacer {
 						} else if (fields.name().contains("CAMPO_TIPOLOGIA")) {
 							stringToReplace = stringToReplace.replace("CAMPO_TIPOLOGIA", atr.getField(fields));
 
-							if (!atr.getField(Fields.CAMPO_ALTRA_TIPOLOGIA).equals("-")) {
-								stringToReplace = stringToReplace.replace("CAMPO_ALTRA_TIPOLOGIA", atr.getField(Fields.CAMPO_ALTRA_TIPOLOGIA));
-							} else {
-								stringToReplace = stringToReplace.replace("|", "");
-								stringToReplace = stringToReplace.replace("CAMPO_ALTRA_TIPOLOGIA", "");
-							}
+//							if (!atr.getField(Fields.CAMPO_ALTRA_TIPOLOGIA).equals("-")) {
+//								stringToReplace = stringToReplace.replace("CAMPO_ALTRA_TIPOLOGIA", atr.getField(Fields.CAMPO_ALTRA_TIPOLOGIA));
+//							} else {
+//								stringToReplace = stringToReplace.replace("|", "");
+//								stringToReplace = stringToReplace.replace("CAMPO_ALTRA_TIPOLOGIA", "");
+//							}
 						} else {
 							stringToReplace = stringToReplace.replaceAll(fields.name(), atr.getField(fields));
 						}
