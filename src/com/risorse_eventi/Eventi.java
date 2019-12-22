@@ -116,8 +116,8 @@ public class Eventi {
 				return fonte;
 
 				// TODO: Da verificare
-			case CAMPO_INFORMAZIONI_CRONOLOGICHE:
-				return informazioneCronologia;
+//			case CAMPO_INFORMAZIONI_CRONOLOGICHE:
+//				return informazioneCronologia;
 
 			case CAMPO_LATITUDINE:
 				return latitudine;

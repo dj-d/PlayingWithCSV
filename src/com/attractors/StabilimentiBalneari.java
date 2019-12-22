@@ -315,8 +315,8 @@ public class StabilimentiBalneari {
 			case CAMPO_NOLEGGIO_PEDALO_ATTREZZATURE_MARINE:
 				return noleggioPedaloAttrezzatureMarine;
 
-			case CAMPO_ALTRA_TIPOLOGIA:
-				return altraTipologia;
+//			case CAMPO_ALTRA_TIPOLOGIA:
+//				return altraTipologia;
 
 			default:
 				return str.name();

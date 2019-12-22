@@ -385,8 +385,8 @@ public class StruttureRicettive {
 			case CAMPO_FONTE:
 				return fonte;
 
-			case CAMPO_ALTRA_TIPOLOGIA:
-				return altraTipologia;
+//			case CAMPO_ALTRA_TIPOLOGIA:
+//				return altraTipologia;
 
 			default:
 				return str.name();

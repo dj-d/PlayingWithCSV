@@ -503,14 +503,14 @@ public class All {
 			case CAMPO_CATEGORIA:
 				return categoria;
 
-			case CAMPO_INFORMAZIONI_CRONOLOGICHE:
-				return informazioniCronologiche;
+//			case CAMPO_INFORMAZIONI_CRONOLOGICHE:
+//				return informazioniCronologiche;
 
 			case CAMPO_FONTE:
 				return fonte;
 
-			case CAMPO_ALTRA_TIPOLOGIA:
-				return altraTipologia;
+//			case CAMPO_ALTRA_TIPOLOGIA:
+//				return altraTipologia;
 
 			case CAMPO_INDIRIZZO_PRODUZIONE:
 				return indirizzoDiProduzione;

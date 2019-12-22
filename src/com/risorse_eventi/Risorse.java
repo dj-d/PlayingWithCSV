@@ -359,8 +359,8 @@ public class Risorse {
 //			case CAMPO_COSTO_BIGLIETTO:
 //				return costoBiglietteria;
 
-			case CAMPO_INFORMAZIONI_CRONOLOGICHE:
-				return fonteInformazioneCronologia;
+//			case CAMPO_INFORMAZIONI_CRONOLOGICHE:
+//				return fonteInformazioneCronologia;
 
 			case CAMPO_LABORATORI_DIDATTICI:
 				return laboratoriDidattici;

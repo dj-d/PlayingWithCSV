@@ -298,8 +298,8 @@ public class Agroalimentare {
 			case CAMPO_GIORNO_DI_CHIUSURA_PUNTO_VENDITA:
 				return giornoDiChiusuraVendita;
 
-			case CAMPO_ALTRA_TIPOLOGIA:
-				return altraTipologia;
+//			case CAMPO_ALTRA_TIPOLOGIA:
+//				return altraTipologia;
 
 			default:
 				return str.name();

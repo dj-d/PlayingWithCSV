@@ -351,8 +351,8 @@ public class Food {
 			case CAMPO_GIORNO_DI_CHIUSURA:
 				return giornoDiChiusura;
 
-			case CAMPO_ALTRA_TIPOLOGIA:
-				return altraTipologia;
+//			case CAMPO_ALTRA_TIPOLOGIA:
+//				return altraTipologia;
 
 			default:
 				return str.name();
