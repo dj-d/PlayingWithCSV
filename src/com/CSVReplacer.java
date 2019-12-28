@@ -4,7 +4,6 @@ import com.attractors.All;
 import com.opencsv.CSVWriter;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
-import com.risorse_eventi.Eventi;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -24,7 +23,8 @@ public class CSVReplacer {
 
 	private static final String CAMPO_ICON_CATEGORY = "CAMPO_ICON_CATEGORY";
 
-	private static final String ARCHEOLOGIA_ARTE_E_STORIA = "Archeologia"; // Archeologia, arte e storia
+	private static final String ARCHEOLOGIA = "Archeologia";
+	private static final String ARTE_E_STORIA = "Arte e Storia";
 	private static final String VACANZE_NELLA_NATURA = "Vacanze nella natura";
 	private static final String PAESI_E_CULTURE = "Paesi e culture";
 	private static final String LE_TRADIZIONI = "Le tradizioni";
@@ -40,7 +40,7 @@ public class CSVReplacer {
 	private static final String iconISapori = "[fusion_image image=\"https://www.molise-italia.it/wp-content/uploads/2019/10/I_sapori-e1574193995857.png\" image_id=\"6078|thumbnail\" link=\"\" linktarget=\"_self\" alt=\"\" /]";
 	private static final String iconIlMare = "[fusion_image image=\"https://www.molise-italia.it/wp-content/uploads/2019/10/Il_mare-e1574194063851.png\" image_id=\"6079|thumbnail\" link=\"\" linktarget=\"_self\" alt=\"\" /]";
 	private static final String iconLaMontagna = "[fusion_image image=\"https://www.molise-italia.it/wp-content/uploads/2019/10/La_montagna-e1574194096676.png\" image_id=\"6080|thumbnail\" link=\"\" linktarget=\"_self\" alt=\"\" /]";
-	private static final String iconBenessere = "[fusion_image image=\"https://www.molise-italia.it/wp-content/uploads/2019/10/Benessere.png\" image_id=\"7544|thumbnail\" link=\"\" linktarget=\"_self\" alt=\"\" /]";
+	private static final String iconBenessere = "[fusion_image image=\"https://www.molise-italia.it/wp-content/uploads/2019/10/Benessere_30x30.png\" image_id=\"7549|thumbnail\" link=\"\" linktarget=\"_self\" alt=\"\" /]";
 
 	public static void main(String[] args) throws IOException {
 		FusionBuildString fusionBuildString = new FusionBuildString();
@@ -86,7 +86,7 @@ public class CSVReplacer {
 							StringBuilder categoryIcon = new StringBuilder();
 
 							for (String category : categoryList(atr.getField(fields))) {
-								if (category.equals(ARCHEOLOGIA_ARTE_E_STORIA)) {
+								if (category.equals(ARCHEOLOGIA)) {
 									categoryIcon.append(iconArcheologiaArteEStoria);
 
 								} else if (category.equals(VACANZE_NELLA_NATURA)) {
