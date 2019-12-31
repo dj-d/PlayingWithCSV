@@ -4,6 +4,9 @@ import com.attractors.All;
 import com.opencsv.CSVWriter;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
+import com.risorse_eventi.Eventi;
+import com.risorse_eventi.ProLocoEdAssociazioni;
+import com.risorse_eventi.Risorse;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -13,7 +16,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class CSVReplacer {
-	private static String nameOfCsv = "joined";
+	private static final String RISORSE = "risorse";
+	private static final String EVENTI = "eventi";
+	private static final String PROLOCO = "proloco";
+
+	private static String nameOfCsv = RISORSE;
 
 	private static final String csvPath = "/home/djd/Documents/Turismo Molise/" + nameOfCsv + ".csv";
 	private static final String newCsvPath = "/home/djd/Documents/Turismo Molise/" + nameOfCsv + "_nuovo.csv";
@@ -56,12 +63,12 @@ public class CSVReplacer {
 						CSVWriter.DEFAULT_LINE_END
 				)) {
 
-			CsvToBean<All> csvToBean = new CsvToBeanBuilder(reader)
-					.withType(All.class)
+			CsvToBean<Risorse> csvToBean = new CsvToBeanBuilder(reader)
+					.withType(Risorse.class)
 					.withIgnoreLeadingWhiteSpace(true)
 					.build();
 
-			for (All atr : csvToBean) {
+			for (Risorse atr : csvToBean) {
 				String stringToReplace = fusionBuildString.getContent();
 
 				stringToReplace = stringToReplace.replaceAll("\n", "");
@@ -84,8 +91,15 @@ public class CSVReplacer {
 //							}
 						} else if (fields.name().contains(Fields.CAMPO_CATEGORIA.name())) {
 							StringBuilder categoryIcon = new StringBuilder();
+							List<String> listCategory;
 
-							for (String category : categoryList(atr.getField(fields))) {
+							if (nameOfCsv.equals(EVENTI)) {
+								listCategory = categoryListForEventi(atr.getField(fields));
+							} else {
+								listCategory = categoryList(atr.getField(fields));
+							}
+
+							for (String category : listCategory) {
 								if (category.equals(ARCHEOLOGIA)) {
 									categoryIcon.append(iconArcheologiaArteEStoria);
 
@@ -166,6 +180,16 @@ public class CSVReplacer {
 			for (int i = 1; i < moreSplit.length; i += 2) {
 				rawList.add(moreSplit[i]);
 			}
+		}
+
+		return rawList.stream().distinct().collect(Collectors.toList());
+	}
+
+	private static List<String> categoryListForEventi(String s) {
+		ArrayList<String> rawList = new ArrayList<>();
+
+		for (String a : s.split("\\|")) {
+			rawList.add(a);
 		}
 
 		return rawList.stream().distinct().collect(Collectors.toList());

@@ -4,33 +4,33 @@ import com.Fields;
 import com.opencsv.bean.CsvBindByName;
 
 public class ProLocoEdAssociazioni {
-	private static final String ID = "Id ";
-	private static final String NOME = "Nome";
-	private static final String COMUNE = "Comune";
-//	private static final String PROVINCIA = "Provincia";
-	private static final String LATITUDINE = "Latitudine";
-	private static final String LONGITUDINE = "Longitudine";
-	private static final String GOOGLE_MAPS = "Google maps";
-	private static final String SITO_WEB = "Sito web";
-	private static final String E_MAIL = "Indirizzo e-mail";
-	private static final String EMAIL_1 = "Indirizzo e-mail secondario";
-	private static final String TELEFONO = "Telefono";
-	private static final String TELEFONO_1 = "Telefono secondario";
-	private static final String INDIRIZZO = "Indirizzo";
-	private static final String FACEBOOK = "Facebook";
-	private static final String INSTAGRAM = "Instagram";
-	private static final String YOUTUBE = "Youtube";
-	private static final String LINK_IMAGE_LOGO = "Link immagine logo";
-	private static final String LINK_IMAGE_COPERTINA = "Link immagine copertina";
-	private static final String LINK_IMAGE_GALLERIA_1 = "Immagine Galleria 1";
-	private static final String LINK_IMAGE_GALLERIA_2 = "Immagine Galleria 2";
-	private static final String LINK_IMAGE_GALLERIA_3 = "Immagine Galleria 3";
-	private static final String LINK_IMAGE_GALLERIA_4 = "Immagine Galleria 4";
+//	private static final String ID = "Id ";
+	private static final String NOME_COMMERCIALE = "NOME COMMERCIALE";
+	private static final String COMUNE = "COMUNE";
+//	private static final String PROVINCIA = "PROVINCIA";
+	private static final String LATITUDINE = "LATITUDINE";
+	private static final String LONGITUDINE = "LONGITUDINE";
+	private static final String GOOGLE_MAPS = "GOOGLE MAPS";
+	private static final String SITO_WEB = "SITO WEB";
+	private static final String E_MAIL = "INDIRIZZO E-MAIL";
+	private static final String EMAIL_1 = "INDIRIZZO E-MAIL SECONDARIO";
+	private static final String TELEFONO = "TELEFONO";
+	private static final String TELEFONO_1 = "TELEFONO SECONDARIO";
+	private static final String INDIRIZZO = "INDIRIZZO";
+	private static final String FACEBOOK = "FACEBOOK";
+	private static final String INSTAGRAM = "INSTAGRAM";
+	private static final String YOUTUBE = "YOUTUBE";
+	private static final String LINK_IMAGE_LOGO = "LINK IMMAGINE LOGO";
+	private static final String LINK_IMAGE_COPERTINA = "LINK IMMAGINE COPERTINA";
+	private static final String LINK_IMAGE_GALLERIA_1 = "IMMAGINE GALLERIA 1";
+	private static final String LINK_IMAGE_GALLERIA_2 = "IMMAGINE GALLERIA 2";
+	private static final String LINK_IMAGE_GALLERIA_3 = "IMMAGINE GALLERIA 3";
+	private static final String LINK_IMAGE_GALLERIA_4 = "IMMAGINE GALLERIA 4";
 
-	@CsvBindByName(column = ID, required = true)
-	private String id;
+//	@CsvBindByName(column = ID, required = true)
+//	private String id;
 
-	@CsvBindByName(column = NOME, required = true)
+	@CsvBindByName(column = NOME_COMMERCIALE, required = true)
 	private String nome;
 
 	@CsvBindByName(column = COMUNE, required = true)

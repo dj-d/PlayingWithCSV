@@ -8,16 +8,16 @@ public class ProveSplit {
 	public static void main(String[] args) {
 		ArrayList<String> categoryOld = new ArrayList<>();
 
-		String s = "Stabilimenti balneari->Il mare,Strutture ricettive->Benessere,Food e beverage->I sapori,Food e beverage->Il mare";
+		String s = "I sapori | Le tradizioni | Paesi e culture | La montagna | Vacanze nella natura";
 
-		String[] split = s.split(",");
+		String[] split = s.split("\\|");
 
 		for (String a : split) {
-			String[] moreSplit = a.split("->");
-
-			for (int i = 1; i < moreSplit.length; i += 2) {
-				categoryOld.add(moreSplit[i]);
-			}
+//			String[] moreSplit = a.split("->");
+			categoryOld.add(a);
+//			for (int i = 1; i < moreSplit.length; i += 2) {
+//				categoryOld.add(moreSplit[i]);
+//			}
 		}
 
 		List<String> category = categoryOld.stream().distinct().collect(Collectors.toList());
