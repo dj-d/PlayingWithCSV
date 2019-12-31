@@ -6,60 +6,60 @@ import com.opencsv.bean.CsvBindByName;
 public class Risorse {
 //	private static final String ID = "id";
 //	private static final String STATO_RISORSA = "STATO RISORSA";
-	private static final String NOME = "Nome";
-	private static final String COMUNE_PROVINCIA = "Comune (Provincia)";
-	private static final String TIPOLOGIA = "Tipologia";
-	private static final String CATEGORIA = "Categoria";
-	private static final String LATITUDINE = "Latitudine";
-	private static final String LONGITUDINE = "Longitudine";
-	private static final String DESCRIZIONE = "Breve descrizione";
-	private static final String SITO_WEB = "Sito web";
-	private static final String TELEFONO = "Telefono";
-	private static final String TELEFONO_1 = "Telefono1";
-	private static final String EMAIL = "E-mail";
-	private static final String EMAIL_1 = "E-mail1";
-	private static final String INDIRIZZO = "Indirizzo";
-	private static final String INDIRIZZO_PUNTO_VENDITA = "Indirizzo punto vendita";
-	private static final String ORARI_APERTURA = "Orari apertura";
-	private static final String PERIODO_DI_APERTURA = "Periodo di apertura";
-	private static final String FACEBOOK = "Facebook";
-	private static final String FLICKR = "Flickr";
-	private static final String GOOGLE_PLUS = "Google plus";
-	private static final String VALUTAZIONE_GOOGLE = "Valutazione Google (in stelline)";
-	private static final String INSTAGRAM = "Instragram";
-	private static final String LINKEDIN = "Linkedin";
-	private static final String PINTEREST = "Pinterest";
-	private static final String TWITTER = "Twitter";
-	private static final String YOUTUBE = "Youtube";
-	private static final String GOOGLE_MAPS = "Google Maps";
-	private static final String TRIPADVISOR = "Tripadvisior";
-	private static final String INFO_AGGIUNTIVE = "Info aggiuntive";
-	private static final String BIGLIETTI = "Biglietti";
-	private static final String PARCHEGGIO = "Parcheggio";
-	private static final String SENTIERI_ESCURSIONISTICI = "Sentieri escursionistici";
-	private static final String AREA_CAMPER = "Aree camper";
-	private static final String AREA_PICNIC = "Aree picnic";
-	private static final String DETTAGLI_VISITE = "Dettagli visite";
-	private static final String STATO_CONSERVAZIONE = "Stato Conservazione";
-	private static final String VENDITA_AL_DETTAGLIO = "Vendita al dettaglio";
-	private static final String POSTO_AUTO = "Posto auto";
-	private static final String ACCESSIBILE_AI_DISABILI = "Accensibile ai disabili";
-	private static final String POSTO_BICI = "Posto bici";
-	private static final String PACCHETTI_OFFERTI = "Pacchetti offerti";
-	private static final String LINK_IMAGE_LOGO = "Link immagine logo";
-	private static final String LINK_IMAGE_COPERTINA = "Link immagine copertina";
-	private static final String LINK_IMAGE_GALLERIA_1 = "Immagine Galleria 1";
-	private static final String LINK_IMAGE_GALLERIA_2 = "Immagine Galleria 2";
-	private static final String LINK_IMAGE_GALLERIA_3 = "Immagine Galleria 3";
-	private static final String LINK_IMAGE_GALLERIA_4 = "Immagine Galleria 4";
-//	private static final String PROVINCIA = "Provincia";
-//	private static final String POSIZIONE = "Posizione";
-	private static final String GIORNO_DI_CHIUSURA = "Giorno di chiusura";
-	private static final String COSTO_BIGLIETTERIA = "Costo biglietteria";
-//	private static final String FONTE_INFORMAZIONE_CRONOLOGIA = "Fonte Informazione cronologica";
-//	private static final String LABORATORI_ESPERENZIALI = "laboratori esperienziali";// TODO: Add to template
-//	private static final String LABORATORI_ESPERENZIALI_ID = "laboratori esperienziali ID";
-	private static final String INFOMOBILITA = "Infomobilità";
+	private static final String NOME_COMMERCIALE = "NOME COMMERCIALE";
+	private static final String COMUNE_PROVINCIA = "COMUNE (PROVINCIA)";
+	private static final String TIPOLOGIA = "TIPOLOGIA";
+	private static final String CATEGORIA = "CATEGORIA";
+	private static final String LATITUDINE = "LATITUDINE";
+	private static final String LONGITUDINE = "LONGITUDINE";
+	private static final String DESCRIZIONE = "BREVE DESCRIZIONE";
+	private static final String SITO_WEB = "SITO WEB";
+	private static final String TELEFONO = "TELEFONO";
+	private static final String TELEFONO_1 = "TELEFONO1";
+	private static final String EMAIL = "E-MAIL";
+	private static final String EMAIL_1 = "E-MAIL.1";
+	private static final String INDIRIZZO = "INDIRIZZO";
+	private static final String INDIRIZZO_PUNTO_VENDITA = "INDIRIZZO PUNTO VENDITA";
+	private static final String ORARI_APERTURA = "ORARI APERTURA";
+	private static final String PERIODO_DI_APERTURA = "PERIODO DI APERTURA";
+	private static final String FACEBOOK = "FACEBOOK";
+	private static final String FLICKR = "FLICKR";
+	private static final String GOOGLE_PLUS = "GOOGLE PLUS";
+	private static final String VALUTAZIONE_GOOGLE = "VALUTAZIONE GOOGLE (IN STELLINE)";
+	private static final String INSTAGRAM = "INSTRAGRAM";
+	private static final String LINKEDIN = "LINKEDIN";
+	private static final String PINTEREST = "PINTEREST";
+	private static final String TWITTER = "TWITTER";
+	private static final String YOUTUBE = "YOUTUBE";
+	private static final String GOOGLE_MAPS = "GOOGLE MAPS";
+	private static final String TRIPADVISOR = "TRIPADVISIOR";
+	private static final String INFO_AGGIUNTIVE = "INFO AGGIUNTIVE";
+	private static final String BIGLIETTI = "BIGLIETTI";
+	private static final String PARCHEGGIO = "PARCHEGGIO";
+	private static final String SENTIERI_ESCURSIONISTICI = "SENTIERI ESCURSIONISTICI";
+	private static final String AREA_CAMPER = "AREE CAMPER";
+	private static final String AREA_PICNIC = "AREE PICNIC";
+	private static final String DETTAGLI_VISITE = "DETTAGLI VISITE";
+	private static final String STATO_CONSERVAZIONE = "STATO CONSERVAZIONE";
+	private static final String VENDITA_AL_DETTAGLIO = "VENDITA AL DETTAGLIO";
+	private static final String POSTO_AUTO = "POSTO AUTO";
+	private static final String ACCESSIBILE_AI_DISABILI = "ACCESSIBILE AI DISABILI";
+	private static final String POSTO_BICI = "POSTO BICI";
+	private static final String PACCHETTI_OFFERTI = "PACCHETTI OFFERTI";
+	private static final String LINK_IMAGE_LOGO = "LINK IMMAGINE LOGO";
+	private static final String LINK_IMAGE_COPERTINA = "LINK IMMAGINE COPERTINA";
+	private static final String LINK_IMAGE_GALLERIA_1 = "IMMAGINE GALLERIA 1";
+	private static final String LINK_IMAGE_GALLERIA_2 = "IMMAGINE GALLERIA 2";
+	private static final String LINK_IMAGE_GALLERIA_3 = "IMMAGINE GALLERIA 3";
+	private static final String LINK_IMAGE_GALLERIA_4 = "IMMAGINE GALLERIA 4";
+//	private static final String PROVINCIA = "PROVINCIA";
+//	private static final String POSIZIONE = "POSIZIONE";
+	private static final String GIORNO_DI_CHIUSURA = "GIORNO DI CHIUSURA";
+	private static final String COSTO_BIGLIETTERIA = "COSTO BIGLIETTERIA";
+//	private static final String FONTE_INFORMAZIONE_CRONOLOGIA = "FONTE INFORMAZIONE CRONOLOGICA";
+//	private static final String LABORATORI_ESPERENZIALI = "LABORATORI ESPERIENZIALI";// TODO: Add to template
+//	private static final String LABORATORI_ESPERENZIALI_ID = "LABORATORI ESPERIENZIALI ID";
+	private static final String INFOMOBILITA = "INFOMOBILITÀ";
 
 //	@CsvBindByName(column = ID, required = true)
 //	private String id;
@@ -67,7 +67,7 @@ public class Risorse {
 //	@CsvBindByName(column = STATO_RISORSA, required = true)
 //	private String statoRisorsa;
 
-	@CsvBindByName(column = NOME, required = true)
+	@CsvBindByName(column = NOME_COMMERCIALE, required = true)
 	private String nome;
 
 	@CsvBindByName(column = COMUNE_PROVINCIA, required = true)
