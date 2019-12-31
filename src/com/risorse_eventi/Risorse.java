@@ -5,9 +5,9 @@ import com.opencsv.bean.CsvBindByName;
 
 public class Risorse {
 //	private static final String ID = "id";
-	private static final String STATO_RISORSA = "STATO RISORSA"; // TODO: Add to template
+//	private static final String STATO_RISORSA = "STATO RISORSA";
 	private static final String NOME = "Nome";
-	private static final String COMUNE_PROVINCIA = "Comune (Provincia)"; // PRENDERE SOLO IL COMUNE
+	private static final String COMUNE_PROVINCIA = "Comune (Provincia)";
 	private static final String TIPOLOGIA = "Tipologia";
 	private static final String CATEGORIA = "Categoria";
 	private static final String LATITUDINE = "Latitudine";
@@ -24,7 +24,7 @@ public class Risorse {
 	private static final String PERIODO_DI_APERTURA = "Periodo di apertura";
 	private static final String FACEBOOK = "Facebook";
 	private static final String FLICKR = "Flickr";
-	private static final String GOOGLE_PLUS = "Google plus"; // TODO: Add to template
+	private static final String GOOGLE_PLUS = "Google plus";
 	private static final String VALUTAZIONE_GOOGLE = "Valutazione Google (in stelline)";
 	private static final String INSTAGRAM = "Instragram";
 	private static final String LINKEDIN = "Linkedin";
@@ -35,12 +35,12 @@ public class Risorse {
 	private static final String TRIPADVISOR = "Tripadvisior";
 	private static final String INFO_AGGIUNTIVE = "Info aggiuntive";
 	private static final String BIGLIETTI = "Biglietti";
-	private static final String PARCHEGGIO = "Parcheggio";// TODO: Add to template
+	private static final String PARCHEGGIO = "Parcheggio";
 	private static final String SENTIERI_ESCURSIONISTICI = "Sentieri escursionistici";
-	private static final String AREA_CAMPER = "Aree camper";// TODO: Add to template(?)
-	private static final String AREA_PICNIC = "Aree picnic";// TODO: Add to template(?)
+	private static final String AREA_CAMPER = "Aree camper";
+	private static final String AREA_PICNIC = "Aree picnic";
 	private static final String DETTAGLI_VISITE = "Dettagli visite";
-	private static final String STATO_CONSERVAZIONE = "Stato Conservazione";// TODO: Add to template
+	private static final String STATO_CONSERVAZIONE = "Stato Conservazione";
 	private static final String VENDITA_AL_DETTAGLIO = "Vendita al dettaglio";
 	private static final String POSTO_AUTO = "Posto auto";
 	private static final String ACCESSIBILE_AI_DISABILI = "Accensibile ai disabili";
@@ -52,20 +52,20 @@ public class Risorse {
 	private static final String LINK_IMAGE_GALLERIA_2 = "Immagine Galleria 2";
 	private static final String LINK_IMAGE_GALLERIA_3 = "Immagine Galleria 3";
 	private static final String LINK_IMAGE_GALLERIA_4 = "Immagine Galleria 4";
-	private static final String PROVINCIA = "Provincia";
-	private static final String POSIZIONE = "Posizione";// TODO: Add to template
+//	private static final String PROVINCIA = "Provincia";
+//	private static final String POSIZIONE = "Posizione";
 	private static final String GIORNO_DI_CHIUSURA = "Giorno di chiusura";
 	private static final String COSTO_BIGLIETTERIA = "Costo biglietteria";
 //	private static final String FONTE_INFORMAZIONE_CRONOLOGIA = "Fonte Informazione cronologica";
-	private static final String LABORATORI_ESPERENZIALI = "laboratori esperienziali";// TODO: Add to template
+//	private static final String LABORATORI_ESPERENZIALI = "laboratori esperienziali";// TODO: Add to template
 //	private static final String LABORATORI_ESPERENZIALI_ID = "laboratori esperienziali ID";
 	private static final String INFOMOBILITA = "Infomobilità";
 
 //	@CsvBindByName(column = ID, required = true)
 //	private String id;
 
-	@CsvBindByName(column = STATO_RISORSA, required = true)
-	private String statoRisorsa;
+//	@CsvBindByName(column = STATO_RISORSA, required = true)
+//	private String statoRisorsa;
 
 	@CsvBindByName(column = NOME, required = true)
 	private String nome;
@@ -205,11 +205,11 @@ public class Risorse {
 	@CsvBindByName(column = LINK_IMAGE_GALLERIA_4, required = true)
 	private String linkImageGalleria4;
 
-	@CsvBindByName(column = PROVINCIA, required = true)
-	private String provincia;
+//	@CsvBindByName(column = PROVINCIA, required = true)
+//	private String provincia;
 
-	@CsvBindByName(column = POSIZIONE, required = true)
-	private String posizione;
+//	@CsvBindByName(column = POSIZIONE, required = true)
+//	private String posizione;
 
 	@CsvBindByName(column = GIORNO_DI_CHIUSURA, required = true)
 	private String giornoDiChiusura;
@@ -220,8 +220,8 @@ public class Risorse {
 //	@CsvBindByName(column = FONTE_INFORMAZIONE_CRONOLOGIA, required = true)
 //	private String fonteInformazioneCronologia;
 
-	@CsvBindByName(column = LABORATORI_ESPERENZIALI, required = true)
-	private String laboratoriEsperenziali;
+//	@CsvBindByName(column = LABORATORI_ESPERENZIALI, required = true)
+//	private String laboratoriEsperenziali;
 
 //	@CsvBindByName(column = LABORATORI_ESPERENZIALI_ID, required = true)
 //	private String laboratoriEsperenzialiId;
@@ -231,14 +231,14 @@ public class Risorse {
 
 	public String getField(Fields str) {
 		switch (str) {
-			case CAMPO_STATO_RISORSA:
-				return statoRisorsa;
+//			case CAMPO_STATO_RISORSA:
+//				return statoRisorsa;
 
 			case CAMPO_NOME_COMMERCIALE:
 				return nome;
 
 			case CAMPO_COMUNE:
-				return comuneProvincia; // Applicare split
+				return comuneProvincia;
 
 			case CAMPO_TIPOLOGIA:
 				return tipologia;
@@ -318,12 +318,11 @@ public class Risorse {
 			case CAMPO_INFO_AGGIUNTIVE:
 				return infoAggiuntive;
 
-			case CAMPO_COSTO_BIGLIETTO: // TODO: Da controllare
+			case CAMPO_COSTO_BIGLIETTO:
 				return biglietti + " " + costoBiglietteria;
 
 			case CAMPO_PARCHEGGIO:
 				return parcheggio;
-
 
 			case CAMPO_SENTIERI_ESCURSIONISTICI:
 				return sentieriEscursionistici;
@@ -373,11 +372,11 @@ public class Risorse {
 			case CAMPO_IMAGE_GALLERIA_4:
 				return linkImageGalleria4;
 
-			case CAMPO_PROVINCIA:
-				return provincia;
+//			case CAMPO_PROVINCIA:
+//				return provincia;
 
-			case CAMPO_POSIZIONE:
-				return posizione;
+//			case CAMPO_POSIZIONE:
+//				return posizione;
 
 			case CAMPO_GIORNO_DI_CHIUSURA:
 				return giornoDiChiusura;
@@ -389,8 +388,8 @@ public class Risorse {
 //			case CAMPO_INFORMAZIONI_CRONOLOGICHE:
 //				return fonteInformazioneCronologia;
 
-			case CAMPO_LABORATORI_ESPERENZIALI:
-				return laboratoriEsperenziali;
+//			case CAMPO_LABORATORI_ESPERENZIALI:
+//				return laboratoriEsperenziali;
 
 //			case CAMPO_LABORATORI_ESPERENZIALI_ID:
 //				return laboratoriEsperenzialiID;
