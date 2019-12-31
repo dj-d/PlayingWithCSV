@@ -52,7 +52,7 @@ public class Risorse {
 	private static final String LINK_IMAGE_GALLERIA_2 = "IMMAGINE GALLERIA 2";
 	private static final String LINK_IMAGE_GALLERIA_3 = "IMMAGINE GALLERIA 3";
 	private static final String LINK_IMAGE_GALLERIA_4 = "IMMAGINE GALLERIA 4";
-//	private static final String PROVINCIA = "PROVINCIA";
+	private static final String PROVINCIA = "PROVINCIA";
 //	private static final String POSIZIONE = "POSIZIONE";
 	private static final String GIORNO_DI_CHIUSURA = "GIORNO DI CHIUSURA";
 	private static final String COSTO_BIGLIETTERIA = "COSTO BIGLIETTERIA";
@@ -194,19 +194,19 @@ public class Risorse {
 	private String linkImageCopertina;
 
 	@CsvBindByName(column = LINK_IMAGE_GALLERIA_1, required = true)
-	private String linkImageGalleria1;
+	private String linkImageGalleriaOne;
 
 	@CsvBindByName(column = LINK_IMAGE_GALLERIA_2, required = true)
-	private String linkImageGalleria2;
+	private String linkImageGalleriaTwo;
 
 	@CsvBindByName(column = LINK_IMAGE_GALLERIA_3, required = true)
-	private String linkImageGalleria3;
+	private String linkImageGalleriaTree;
 
 	@CsvBindByName(column = LINK_IMAGE_GALLERIA_4, required = true)
-	private String linkImageGalleria4;
+	private String linkImageGalleriaFour;
 
-//	@CsvBindByName(column = PROVINCIA, required = true)
-//	private String provincia;
+	@CsvBindByName(column = PROVINCIA, required = true)
+	private String provincia;
 
 //	@CsvBindByName(column = POSIZIONE, required = true)
 //	private String posizione;
@@ -238,7 +238,7 @@ public class Risorse {
 				return nome;
 
 			case CAMPO_COMUNE:
-				return comuneProvincia;
+				return comune(comuneProvincia);
 
 			case CAMPO_TIPOLOGIA:
 				return tipologia;
@@ -259,15 +259,25 @@ public class Risorse {
 				return sitoWeb;
 
 			case CAMPO_TELEFONO:
+				if(!telefono.equals("-") || !telefonoOne.equals("-"))
+					return isEmpty(telefono);
+
 				return telefono;
 
 			case CAMPO_TELEFONO1:
+				if(!telefono.equals("-") || !telefonoOne.equals("-"))
+					return isEmpty(telefonoOne);
 				return telefonoOne;
 
 			case CAMPO_EMAIL:
+				if(!email.equals("-") || !emailOne.equals("-"))
+					return isEmpty(email);
 				return email;
 
 			case CAMPO_EMAIL1:
+				if(!email.equals("-") || !emailOne.equals("-"))
+					return isEmpty(emailOne);
+
 				return emailOne;
 
 			case CAMPO_INDIRIZZO:
@@ -361,19 +371,19 @@ public class Risorse {
 				return linkImageCopertina;
 
 			case CAMPO_IMAGE_GALLERIA_1:
-				return linkImageGalleria1;
+				return linkImageGalleriaOne;
 
 			case CAMPO_IMAGE_GALLERIA_2:
-				return linkImageGalleria2;
+				return linkImageGalleriaTwo;
 
 			case CAMPO_IMAGE_GALLERIA_3:
-				return linkImageGalleria3;
+				return linkImageGalleriaTree;
 
 			case CAMPO_IMAGE_GALLERIA_4:
-				return linkImageGalleria4;
+				return linkImageGalleriaFour;
 
-//			case CAMPO_PROVINCIA:
-//				return provincia;
+			case CAMPO_PROVINCIA:
+				return provincia;
 
 //			case CAMPO_POSIZIONE:
 //				return posizione;
@@ -400,5 +410,19 @@ public class Risorse {
 			default:
 				return str.name();
 		}
+	}
+
+	private static String comune(String s) {
+		String[] split = s.split("\\(");
+
+		return split[0];
+	}
+
+	private String isEmpty(String s) {
+		if(s.equals("-")) {
+			return "";
+		}
+
+		return s;
 	}
 }
