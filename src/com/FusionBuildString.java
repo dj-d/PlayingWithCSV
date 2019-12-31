@@ -29,7 +29,7 @@ public class FusionBuildString {
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-envelope far\"]\n" +
 			"\n" +
-			"<a href=\"mailto://CAMPO_EMAIL\">CAMPO_EMAIL</a>\n" +
+			"<a href=\"mailto://CAMPO_EMAIL\">CAMPO_EMAIL</a><br>\n" +
 			"<a href=\"mailto://CAMPO_EMAIL1\">CAMPO_EMAIL1</a>\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-map-marker-alt fas\"]\n" +
@@ -374,7 +374,7 @@ public class FusionBuildString {
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-envelope far\"]\n" +
 			"\n" +
-			"<a href=\"mailto://CAMPO_EMAIL\">CAMPO_EMAIL</a>\n" +
+			"<a href=\"mailto://CAMPO_EMAIL\">CAMPO_EMAIL</a><br>\n" +
 			"<a href=\"mailto://CAMPO_EMAIL1\">CAMPO_EMAIL1</a>\n" +
 			"\n" +
 			"[/fusion_li_item][fusion_li_item icon=\"fa-map-marker-alt fas\"]\n" +
