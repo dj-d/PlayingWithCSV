@@ -7,7 +7,7 @@ public class ProLocoEdAssociazioni {
 	private static final String ID = "Id ";
 	private static final String NOME = "Nome";
 	private static final String COMUNE = "Comune";
-	private static final String PROVINCIA = "Provincia";
+//	private static final String PROVINCIA = "Provincia";
 	private static final String LATITUDINE = "Latitudine";
 	private static final String LONGITUDINE = "Longitudine";
 	private static final String GOOGLE_MAPS = "Google maps";
@@ -36,8 +36,8 @@ public class ProLocoEdAssociazioni {
 	@CsvBindByName(column = COMUNE, required = true)
 	private String comune;
 
-	@CsvBindByName(column = PROVINCIA, required = true)
-	private String provincia;
+//	@CsvBindByName(column = PROVINCIA, required = true)
+//	private String provincia;
 
 	@CsvBindByName(column = LATITUDINE, required = true)
 	private String latitudine;
@@ -104,8 +104,8 @@ public class ProLocoEdAssociazioni {
 			case CAMPO_COMUNE:
 				return comune;
 
-			case CAMPO_PROVINCIA:
-				return provincia;
+//			case CAMPO_PROVINCIA:
+//				return provincia;
 
 			case CAMPO_LATITUDINE:
 				return latitudine;
