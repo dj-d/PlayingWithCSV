@@ -10,10 +10,10 @@ public class Eventi {
 	private static final String PROVINCIA = "Provincia";
 	private static final String CATEGORIA = "Categoria";
 	private static final String DESCRIZIONE = "Descrizione";
-	private static final String PERIODO = "Periodo";
-	private static final String LUOGO = "Luogo";
+	private static final String PERIODO = "Periodo"; // TODO: Add to template
+	private static final String LUOGO = "Luogo"; // TODO: Add to template
 	private static final String FONTE = "Fonte";
-	private static final String INFORMAZIONE_CRONOLOGIA = "Informazione cronologica";
+//	private static final String INFORMAZIONE_CRONOLOGIA = "Informazione cronologica";
 	private static final String LATITUDINE = "Latitudine";
 	private static final String LONGITUDINE = "Longitudine";
 	private static final String LINK_IMAGE_COPERTINA = "Link immagine copertina";
@@ -21,8 +21,8 @@ public class Eventi {
 	private static final String LINK_IMAGE_GALLERIA_2 = "Immagine Galleria 2";
 	private static final String LINK_IMAGE_GALLERIA_3 = "Immagine Galleria 3";
 	private static final String LINK_IMAGE_GALLERIA_4 = "Immagine Galleria 4";
-	private static final String ORGANIZZATORE = "Organizzatore";
-	private static final String LABORATORI_DIDATTICI = "laboratori didattici";
+	private static final String ORGANIZZATORE = "Organizzatore"; // TODO: Add to template
+	private static final String LABORATORI_DIDATTICI = "laboratori didattici"; // TODO: Add to template
 	//	private static final String LABORATORI_DIDATTICI_ID = "laboratori didattici ID";
 	private static final String INFOMOBILITA = "Infomobilità";
 
@@ -53,8 +53,8 @@ public class Eventi {
 	@CsvBindByName(column = FONTE, required = true)
 	private String fonte;
 
-	@CsvBindByName(column = INFORMAZIONE_CRONOLOGIA, required = true)
-	private String informazioneCronologia;
+//	@CsvBindByName(column = INFORMAZIONE_CRONOLOGIA, required = true)
+//	private String informazioneCronologia;
 
 	@CsvBindByName(column = LATITUDINE, required = true)
 	private String latitudine;
@@ -89,6 +89,7 @@ public class Eventi {
 	@CsvBindByName(column = INFOMOBILITA, required = true)
 	private String infomobilita;
 
+	// TODO: Da ricontrollare campi
 	public String getField(Fields str) {
 		switch (str) {
 			case CAMPO_NOME_COMMERCIALE:
@@ -106,16 +107,16 @@ public class Eventi {
 			case CAMPO_DESCRIZIONE:
 				return descrizione;
 
-//			case CAMPO_PERIODO:
-//				return periodo;
+			case CAMPO_PERIODO:
+				return periodo;
 
-//			case CAMPO_LUOGO:
-//				return luogo;
+			case CAMPO_LUOGO:
+				return luogo;
 
 			case CAMPO_FONTE:
 				return fonte;
 
-				// TODO: Da verificare
+
 //			case CAMPO_INFORMAZIONI_CRONOLOGICHE:
 //				return informazioneCronologia;
 
@@ -140,8 +141,8 @@ public class Eventi {
 			case CAMPO_IMAGE_GALLERIA_4:
 				return linkImageGalleria4;
 
-//			case CAMPO_ORGANIZZATORE:
-//				return organizzatore;
+			case CAMPO_ORGANIZZATORE:
+				return organizzatore;
 
 			case CAMPO_LABORATORI_DIDATTICI:
 				return laboratoriDidattici;
