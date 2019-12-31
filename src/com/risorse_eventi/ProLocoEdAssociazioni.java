@@ -7,7 +7,7 @@ public class ProLocoEdAssociazioni {
 //	private static final String ID = "Id ";
 	private static final String NOME_COMMERCIALE = "NOME COMMERCIALE";
 	private static final String COMUNE = "COMUNE";
-//	private static final String PROVINCIA = "PROVINCIA";
+	private static final String PROVINCIA = "PROVINCIA";
 	private static final String LATITUDINE = "LATITUDINE";
 	private static final String LONGITUDINE = "LONGITUDINE";
 	private static final String GOOGLE_MAPS = "GOOGLE MAPS";
@@ -36,8 +36,8 @@ public class ProLocoEdAssociazioni {
 	@CsvBindByName(column = COMUNE, required = true)
 	private String comune;
 
-//	@CsvBindByName(column = PROVINCIA, required = true)
-//	private String provincia;
+	@CsvBindByName(column = PROVINCIA, required = true)
+	private String provincia;
 
 	@CsvBindByName(column = LATITUDINE, required = true)
 	private String latitudine;
@@ -91,7 +91,7 @@ public class ProLocoEdAssociazioni {
 	private String linkImgGalleria3;
 
 	@CsvBindByName(column = LINK_IMAGE_GALLERIA_4, required = true)
-	private String linkImgGalleria4;
+	private String linkImgGalleriaFour;
 
 	public String getField(Fields str) {
 		switch (str) {
@@ -102,10 +102,10 @@ public class ProLocoEdAssociazioni {
 				return nome;
 
 			case CAMPO_COMUNE:
-				return comune;
+				return comune(comune);
 
-//			case CAMPO_PROVINCIA:
-//				return provincia;
+			case CAMPO_PROVINCIA:
+				return provincia;
 
 			case CAMPO_LATITUDINE:
 				return latitudine;
@@ -120,15 +120,25 @@ public class ProLocoEdAssociazioni {
 				return sitoWeb;
 
 			case CAMPO_EMAIL:
+				if(!email.equals("-") || !emailOne.equals("-"))
+					return isEmpty(email);
 				return email;
 
 			case CAMPO_EMAIL1:
+				if(!email.equals("-") || !emailOne.equals("-"))
+					return isEmpty(emailOne);
+
 				return emailOne;
 
 			case CAMPO_TELEFONO:
+				if(!telefono.equals("-") || !telefonoOne.equals("-"))
+					return isEmpty(telefono);
+
 				return telefono;
 
 			case CAMPO_TELEFONO1:
+				if(!telefono.equals("-") || !telefonoOne.equals("-"))
+					return isEmpty(telefonoOne);
 				return telefonoOne;
 
 			case CAMPO_INDIRIZZO:
@@ -159,10 +169,24 @@ public class ProLocoEdAssociazioni {
 				return linkImgGalleria3;
 
 			case CAMPO_IMAGE_GALLERIA_4:
-				return linkImgGalleria4;
+				return linkImgGalleriaFour;
 
 			default:
 				return str.name();
 		}
+	}
+
+	private static String comune(String s) {
+		String[] split = s.split("\\(");
+
+		return split[0];
+	}
+
+	private String isEmpty(String s) {
+		if(s.equals("-")) {
+			return "";
+		}
+
+		return s;
 	}
 }
