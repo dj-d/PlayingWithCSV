@@ -3,7 +3,7 @@ package com.risorse_eventi;
 public class ProLocoEdAssociazioni {
 	private static final String ID = "Id \n";
 	private static final String NOME = "Nome\n";
-	private static final String COMUNE = "Comune\n";
+	private static final String COMUNE = "Comune\n"; // TODO: Applicare split
 	private static final String PROVINCIA = "Provincia\n";
 	private static final String LATITUDINE = "Latitudine\n";
 	private static final String LONGITUDINE = "Longitudine\n";
