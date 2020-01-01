@@ -1,6 +1,6 @@
-package com.risorse_eventi;
+package com.eventi;
 
-import com.Fields;
+import com.FieldsAziendeRisorse;
 import com.opencsv.bean.CsvBindByName;
 
 public class Eventi {
@@ -14,8 +14,6 @@ public class Eventi {
 	private static final String LUOGO = "Luogo";
 	private static final String FONTE = "Fonte";
 //	private static final String INFORMAZIONE_CRONOLOGIA = "Informazione cronologica";
-	private static final String LATITUDINE = "Latitudine";
-	private static final String LONGITUDINE = "Longitudine";
 	private static final String LINK_IMAGE_COPERTINA = "Link immagine copertina";
 	private static final String LINK_IMAGE_GALLERIA_1 = "Immagine Galleria 1";
 	private static final String LINK_IMAGE_GALLERIA_2 = "Immagine Galleria 2";
@@ -56,11 +54,6 @@ public class Eventi {
 //	@CsvBindByName(column = INFORMAZIONE_CRONOLOGIA, required = true)
 //	private String informazioneCronologia;
 
-	@CsvBindByName(column = LATITUDINE, required = true)
-	private String latitudine;
-
-	@CsvBindByName(column = LONGITUDINE, required = true)
-	private String longitudine;
 
 	@CsvBindByName(column = LINK_IMAGE_COPERTINA, required = true)
 	private String linkImageCopertina;
@@ -89,9 +82,9 @@ public class Eventi {
 	@CsvBindByName(column = INFOMOBILITA, required = true)
 	private String infomobilita;
 
-	public String getField(Fields str) {
+	public String getField(FieldsEventi str) {
 		switch (str) {
-			case CAMPO_NOME_COMMERCIALE:
+			case CAMPO_NOME_EVENTO:
 				return nome;
 
 			case CAMPO_COMUNE:
@@ -117,12 +110,6 @@ public class Eventi {
 
 //			case CAMPO_INFORMAZIONI_CRONOLOGICHE:
 //				return informazioneCronologia;
-
-			case CAMPO_LATITUDINE:
-				return latitudine;
-
-			case CAMPO_LONGITUDINE:
-				return longitudine;
 
 			case CAMPO_IMAGE_COPERTINA:
 				return linkImageCopertina;
