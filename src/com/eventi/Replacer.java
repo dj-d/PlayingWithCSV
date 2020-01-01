@@ -55,10 +55,7 @@ public class Replacer {
 						if (fields.name().contains(FieldsEventi.CAMPO_CATEGORIA.name())) {
 							StringBuilder categoryIcon = new StringBuilder();
 
-							System.out.println(categoryList(ev.getField(fields)));
-
 							for (String category : categoryList(ev.getField(fields))) {
-								System.out.println(category);
 								if (category.equals(CSVReplacer.ARCHEOLOGIA)) {
 									categoryIcon.append(CSVReplacer.iconArcheologiaArteEStoria);
 
