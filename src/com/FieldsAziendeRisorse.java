@@ -1,6 +1,6 @@
 package com;
 
-public enum Fields {
+public enum FieldsAziendeRisorse {
 	CAMPO_NOME_COMMERCIALE,
 	CAMPO_TIPOLOGIA,
 	CAMPO_DISTANZA,

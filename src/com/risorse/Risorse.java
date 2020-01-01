@@ -1,6 +1,6 @@
-package com.risorse_eventi;
+package com.risorse;
 
-import com.Fields;
+import com.FieldsAziendeRisorse;
 import com.opencsv.bean.CsvBindByName;
 
 public class Risorse {
@@ -229,7 +229,7 @@ public class Risorse {
 	@CsvBindByName(column = INFOMOBILITA, required = true)
 	private String infomobilita;
 
-	public String getField(Fields str) {
+	public String getField(FieldsAziendeRisorse str) {
 		switch (str) {
 //			case CAMPO_STATO_RISORSA:
 //				return statoRisorsa;

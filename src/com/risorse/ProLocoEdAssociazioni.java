@@ -1,6 +1,6 @@
-package com.risorse_eventi;
+package com.risorse;
 
-import com.Fields;
+import com.FieldsAziendeRisorse;
 import com.opencsv.bean.CsvBindByName;
 
 public class ProLocoEdAssociazioni {
@@ -93,7 +93,7 @@ public class ProLocoEdAssociazioni {
 	@CsvBindByName(column = LINK_IMAGE_GALLERIA_4, required = true)
 	private String linkImgGalleriaFour;
 
-	public String getField(Fields str) {
+	public String getField(FieldsAziendeRisorse str) {
 		switch (str) {
 //			case CAMPO_ID:
 //				return id;

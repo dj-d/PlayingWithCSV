@@ -1,6 +1,6 @@
 package com.attractors;
 
-import com.Fields;
+import com.FieldsAziendeRisorse;
 import com.opencsv.bean.CsvBindByName;
 
 public class AgenzieViaggiETurismo {
@@ -157,7 +157,7 @@ public class AgenzieViaggiETurismo {
 	@CsvBindByName(column = GIORNO_DI_CHIUSURA, required = true)
 	private String giornoDiChiusura;
 
-	public String getField(Fields str) {
+	public String getField(FieldsAziendeRisorse str) {
 		switch (str) {
 			case CAMPO_NOME_COMMERCIALE:
 				return nomeCommerciale;

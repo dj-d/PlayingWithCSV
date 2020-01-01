@@ -1,8 +1,7 @@
-package com.risorse_eventi;
+package com.risorse;
 
-import com.Fields;
+import com.FieldsAziendeRisorse;
 import com.opencsv.bean.CsvBindByName;
-import jdk.jshell.spi.SPIResolutionException;
 
 public class ServiziPerIlTurismo {
 //	private static final String ID = "Id";
@@ -155,7 +154,7 @@ public class ServiziPerIlTurismo {
 	@CsvBindByName(column = LUOGO_CENTRALE, required = true)
 	private String luogoCentrale;
 
-	public String getField(Fields str) {
+	public String getField(FieldsAziendeRisorse str) {
 		switch (str) {
 			case CAMPO_NOME_COMMERCIALE:
 				return nome;

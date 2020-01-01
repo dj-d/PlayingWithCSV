@@ -1,6 +1,6 @@
 package com.attractors;
 
-import com.Fields;
+import com.FieldsAziendeRisorse;
 import com.opencsv.bean.CsvBindByName;
 
 public class Food {
@@ -217,7 +217,7 @@ public class Food {
 	@CsvBindByName(column = ALTRA_TIPOLOGIA, required = true)
 	private String altraTipologia;
 
-	public String getField(Fields str) {
+	public String getField(FieldsAziendeRisorse str) {
 		switch (str) {
 			case CAMPO_NOME_COMMERCIALE:
 				return nomeCommerciale;

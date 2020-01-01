@@ -1,6 +1,6 @@
 package com.attractors;
 
-import com.Fields;
+import com.FieldsAziendeRisorse;
 import com.opencsv.bean.CsvBindByName;
 
 public class All {
@@ -357,7 +357,7 @@ public class All {
 	@CsvBindByName(column = LINK_ALLE_PROPOSTE, required = true)
 	private String linkAlleProposte;
 
-	public String getField(Fields str) {
+	public String getField(FieldsAziendeRisorse str) {
 		switch (str) {
 			case CAMPO_NOME_COMMERCIALE:
 				return nomeCommerciale;
@@ -372,15 +372,25 @@ public class All {
 				return sitoWeb;
 
 			case CAMPO_TELEFONO1:
+				if(!telefono.equals("-") || !telefonoOne.equals("-"))
+					return isEmpty(telefonoOne);
 				return telefonoOne;
 
 			case CAMPO_TELEFONO:
+				if(!telefono.equals("-") || !telefonoOne.equals("-"))
+					return isEmpty(telefono);
+
 				return telefono;
 
 			case CAMPO_EMAIL1:
+				if(!email.equals("-") || !emailOne.equals("-"))
+					return isEmpty(emailOne);
+
 				return emailOne;
 
 			case CAMPO_EMAIL:
+				if(!email.equals("-") || !emailOne.equals("-"))
+					return isEmpty(email);
 				return email;
 
 			case CAMPO_INDIRIZZO:
@@ -614,5 +624,13 @@ public class All {
 			default:
 				return str.name();
 		}
+	}
+
+	private String isEmpty(String s) {
+		if(s.equals("-")) {
+			return "";
+		}
+
+		return s;
 	}
 }
